@@ -12,37 +12,36 @@
 <body>
 	<div id="siteWrap">
 		<div id="header">
-			<input type="button" value="Login" style="width:100px">
-			<input type="button" value="Sign-up" style="width:100px" disabled="disabled">
+			<div id="header_left">
+				<img src="./img/logo.png" width="200px" height="100px">
+			</div>					
+			
+			<div id="header_right">			
+				<input type="button" value="Login" style="width:100px" disabled="disabled">
+				<input type="button" value="Sign-up" style="width:100px" >
+			</div>
+			
 		</div>
 	
 		<div id="contents">
 		
-			<!--
 			
-			검색 박스
-			
-			<div id="search_area">
-				<input type="text">
-				<a href=""><input type="button" value="Search"></a><br/><br/><br/>
-			</div>
-			
-			-->
 			
 			<!--로그인 박스-->
 			<div id="login_windows">
 				<!--로그인에서의 id입력-->
 				<div id="enter_id">
-					<h1>E-Mail</h1><input type="text">				
+					<p>E-Mail</p><input type="text">				
 				</div>
 				
 				<!--로그인에서의 password입력-->
 				<div id="enter_password">
-					<h1>Password</h1><input type="password">
+					<p>Password</p><input type="password">
 				</div>
 
 				<a href="./login_after.html"><input type="button" value="LOG-IN"></a>
 			</div>
+		</div>
 		
 		
 		<div id="footer">			

@@ -24,18 +24,32 @@ font: 15px "trebuchet ms",helvetica,arial,sans-serif;
 }
 
 #siteWrap{
-margin:10px auto;
-text-align:center;
+width: 960px;
+margin: 25px auto 0px auto;
+}
+
+#header_left{
+float:left;
 }
 
 #header{
 padding:0 20px;
 text-align:right;
+height:100px;
+}
+
+#contents{
+margin:0 auto;
+text-align:center;
 }
 
 
+
 #footer{
-margin : 70px 10px 30px 10px;
+height:70px;
+padding : 30px;
+margin: 0 auto;
+text-align:center;
 }
 
 
