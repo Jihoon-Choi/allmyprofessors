@@ -66,11 +66,10 @@ font-size : 15pt;
 
 }
 
-#contents{
+#contentsWrap{
 height:300px;
 margin:0 auto;
 padding:10px 10px;
-text-align:center;
 background-color:#fff;
 }
 
