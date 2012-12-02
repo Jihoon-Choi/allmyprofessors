@@ -36,18 +36,21 @@
 			<p> Create an Account </p>
 			<p> Creating an account will let you rate professors, leave comments, and more.</p>
 			<div id="ifprof">당신이 교수면, 특별한 계정이 필요하다. <a href="./ref_signup_prof.html">CLICK</a>이곳을 눌러서 교수용 계정으로 가입해라.</div>
-			<div id="contents">
-			<ul>
-				<li>email<input type="text">  </li>
-				<li>Password<input type="text">  </li>
-				<li>Password confirm <input type="text"> </li>
-				<li>School<input type="text">  </li>
-				<li>Major <input type="text"> </li>
-					 <input type="checkbox">동의합니다
-			</ul>
-			</div>
+			
+			<form action="memReg" method="post">
+				<div id="contents">
+				<ul>
+					<li>email<input type="text" id="email">  </li>
+					<li>Password<input type="text" id="passwd">  </li>
+					<li>Password confirm <input type="text" id="passwd_conform"> </li>
+					<li>School<input type="text" id="school">  </li>
+					<li>Major <input type="text" id="major"> </li>
+						 <input type="checkbox">동의합니다
+				</ul>
+				</div>
+			</form>
 				
-			<input type="button" value="제출">
+			<input type="submit" value="제출">
 			
 		</div>
 
