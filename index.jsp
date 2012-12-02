@@ -32,7 +32,7 @@
 			<div id="contents_main">
 				<img src="./img/logo.png" style="width:300px"><br/>
 					
-				<FORM ACTION=/amp/searchresult.jsp METHOD=GET>
+				<FORM ACTION=/amp/professor.jsp METHOD=GET>
 					It's JSP Page
 					<input type=text name=keyword id="search_box" style="width:300px">	
 						

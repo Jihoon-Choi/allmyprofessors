@@ -1,4 +1,0 @@
-mjmyprofessors
-==============
-
-rate my Professors

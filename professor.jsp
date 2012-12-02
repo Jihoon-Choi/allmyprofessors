@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<%@page contentType="text/html; charset=utf-8"%>
+
+
+
+<!DOCTYPE html>
 <html lang="ko">
 
 
@@ -19,7 +23,7 @@
 			</div>
 			
 			<div id="header_left">
-				<a href="./index.html"><img src="./img/logo.png" width="170px" height="90px"></a>
+				<a href="./index.jsp"><img src="./img/logo.png" width="170px" height="90px"></a>
 			</div>					
 				
 			<div id="header_search">
@@ -33,13 +37,13 @@
 		
 			<ul>
 				<li id="navhome">
-					<a href="./index.html">HOME</a>
+					<a href="./index.jsp">HOME</a>
 					</li>
 				<li id="nav_about">
 					<a href="./about.html">About</a>
 					</li>
 				<li id="nav_professor">
-					<a href="./professor.html">Professor</a>
+					<a href="./professor.jsp">Professor</a>
 					</li>
 				<li id="nav_school">
 					<a href="./school.html">School</a>
@@ -55,6 +59,7 @@
 		
 		<div id="contentsWrap">
 			<div class="wrapper">
+				안녕하세요, <%= request.getParameter("keyword") %>으로 검색하셨군요!!!
 				<div id="searchMap">
 					<div id="proSearch">
 						<input type="text">
