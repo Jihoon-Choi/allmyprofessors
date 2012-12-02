@@ -1,3 +1,6 @@
+<%@page contentType="text/html; charset=utf-8"%>
+
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -11,6 +14,10 @@
 </head>
 	
 <body>
+	<% 
+		String path1=application.getRealPath("/amp/searchresult.jsp");
+		String path2=application.getRealPath("/amp/searchresult.jsp");
+		%>
 	
 		<div id="siteWrap">
 			<div id="header">
@@ -24,13 +31,17 @@
 			
 			<div id="contents_main">
 				<img src="./img/logo.png" style="width:300px"><br/>
-				
-				<form action=/amp/searchresult.jsp method=GET>
-					<input type=text name=keyword id="search_box" style="width:300px">
+					
+				<FORM ACTION=/amp/searchresult.jsp METHOD=GET>
+					It's JSP Page
+					<input type=text name=keyword id="search_box" style="width:300px">	
+						
 					<select name=sel>
-						<option> 교수 </option>
-						<option> 학교 </option>
+						<option value="1"> 교수 </option>
+						<option value="2"> 학교 </option>
 					</select>
+					
+					
 					<input type=submit value="검색" style="width:100px"> </a>
 				</form>
 				
