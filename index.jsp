@@ -1,4 +1,5 @@
-<%@page contentType="text/html; charset=utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="UTF-8" import="java.util.*" import="java.sql.*" %>
 
 
 <!DOCTYPE html>
@@ -22,11 +23,7 @@
 		<div id="siteWrap">
 			<div id="header">
 				<a href="./login.html"><input type="button" value="Login" style="width:100px"></a>
-	<<<<<<< HEAD
-				<a href="./signup_student.html"><input type="button" value="Sign-up" style="width:100px"></a>		
-	=======
-				<a href="./signup.html"><input type="button" value="Sign-up" style="width:100px"></a>
-	>>>>>>> 2fe0629ac6dab5e8f82962b5b501b2a09eea1e76
+				<a href="./signup_student.html"><input type="button" value="Sign-up" style="width:100px"></a>						
 			</div>
 			
 			<div id="contents_main">
@@ -43,20 +40,17 @@
 					
 					
 					<input type=submit value="검색" style="width:100px"> </a>
-				</form>
-				
-				<a href="./about.html"><input type="button" value="SKIP" style="width:100px"></a>
-				</a>
+				</form>					
 			</div>
 		
 
 			
 			<div id="footer">			
-					<p> 
-						사이트소개 | 이용약관 | 개인정보취급방침 | 고객센터
-					</p>			
-					<p> Copyright(c) All My Professors. All rights reserved.
-					</p>
+								<p> 
+									사이트소개 | 이용약관 | 개인정보취급방침 | 고객센터
+								</p>			
+								<p> Copyright(c) All My Professors. All rights reserved.
+								</p>
 			</div>
 			
 		</div>

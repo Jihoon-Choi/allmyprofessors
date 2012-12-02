@@ -23,7 +23,7 @@
 			</div>
 			
 			<div id="header_left">
-				<a href="#"><img src="./img/logo.png" width="170px" height="90px"></a>
+				<a href="./index.jsp"><img src="./img/logo.png" width="170px" height="90px"></a>
 			</div>					
 				
 			<div id="header_search">
@@ -37,7 +37,7 @@
 		
 			<ul>
 				<li id="navhome">
-					<a href="#">HOME</a>
+					<a href="./index.jsp">HOME</a>
 					</li>
 				<li id="nav_about">
 					<a href="./about.html">About</a>
@@ -58,32 +58,13 @@
 	
 		
 		<div id="contentsWrap">
-			<div class="wrapper">
-				안녕하세요, <%= request.getParameter("keyword") %>으로 검색하셨군요!!!
-				<div id="searchMap">
-					<div id="proSearch">
-						<input type="text">
-						<input type="button" value="search">
-						<p>교수님을 등록하시려면 <a href="./ref_add_prof.html">Click</a>해 주세요.</p>
-					</div>
-				</div>
-				<div id="searchContents">
-					<div class="pagination">
-						<a href="#" class="direction"><span>&lsaquo;</span>이전</a>
-						<a href="#">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#">4</a>
-						<a href="#">5</a>
-						<a href="#">6</a>
-						<a href="#">7</a>
-						<a href="#">8</a>
-						<a href="#">9</a>
-						<a href="#">10</a>
-						<a href="#" class="direction"><span>&rsaquo;</span>다음</a>
-					</div>
-				</div>
-			</div>
+			
+			안녕하세요, <%= request.getParameter("email") %>님
+			안녕하세요, <%= request.getParameter("passwd") %>님
+			안녕하세요, <%= request.getParameter("school") %>님
+			안녕하세요, <%= request.getParameter("major") %>님
+	
+			
 		</div>
 		
 		<div id="footer">			
