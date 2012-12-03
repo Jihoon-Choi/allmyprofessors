@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<%@page contentType="text/html; charset=utf-8"%>
+
+
+
+<!DOCTYPE html>
 <html lang="ko">
 
 
@@ -39,13 +43,13 @@
 					<a href="./about.html">About</a>
 					</li>
 				<li id="nav_professor">
-					<a href="./professor.jsp">Professor</a>
+					<a href="/professor.jsp">Professor</a>
 					</li>
 				<li id="nav_school">
 					<a href="./school.html">School</a>
 					</li>
 				<li id="nav_toplist">
-					<a href="./toplist.html">Top List</a>
+					<a href="/toplist.html">Top List</a>
 					</li>
 				
 			</ul>
@@ -54,31 +58,12 @@
 	
 		
 		<div id="contentsWrap">
-			<div class="wrapper">
-				<div id="searchMap">
-					<div id="proSearch">
-						<input type="text">
-						<input type="button" value="search">
-						<p>학교를 등록하시려면 <a href="./ref_add_school.html">Click</a>해 주세요.</p>
-					</div>
-				</div>
-				<div id="searchContents">
-					<div class="pagination">
-						<a href="#" class="direction"><span>&lsaquo;</span>이전</a>
-						<a href="#">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#">4</a>
-						<a href="#">5</a>
-						<a href="#">6</a>
-						<a href="#">7</a>
-						<a href="#">8</a>
-						<a href="#">9</a>
-						<a href="#">10</a>
-						<a href="#" class="direction"><span>&rsaquo;</span>다음</a>
-					</div>
-				</div>
-			</div>
+			<h1>it's top list!!!!!!!!!!!</h1>
+			<ul>
+				<li></li>
+			</ul>
+			
+		
 		</div>
 		
 		<div id="footer">			
@@ -87,11 +72,6 @@
 			</p>			
 			<p> Copyright(c) Choi Jihoon. All rights reserved.
 			</p>
-		</div>
-
-		<div id="footerSearch">
-			<input type="text">
-			<input type="button" value="search">
 		</div>
 	
 	</div>

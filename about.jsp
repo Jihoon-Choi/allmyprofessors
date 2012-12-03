@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<%@page contentType="text/html; charset=utf-8"%>
+
+
+
+<!DOCTYPE html>
 <html lang="ko">
 
 
@@ -36,16 +40,16 @@
 					<a href="./index.jsp">HOME</a>
 					</li>
 				<li id="nav_about">
-					<a href="./about.html">About</a>
+					<a href="./about.jsp">About</a>
 					</li>
 				<li id="nav_professor">
 					<a href="./professor.jsp">Professor</a>
 					</li>
 				<li id="nav_school">
-					<a href="./school.html">School</a>
+					<a href="./school.jsp">School</a>
 					</li>
 				<li id="nav_toplist">
-					<a href="./toplist.html">Top List</a>
+					<a href="./toplist.jsp">Top List</a>
 					</li>
 				
 			</ul>
@@ -54,7 +58,7 @@
 	
 		
 		<div id="contentsWrap">
-			<h1>it's top list!!!!!!!!!!!</h1>
+			<h1>it's about!!!!!!!!!!!</h1>
 			<ul>
 				<li></li>
 			</ul>
