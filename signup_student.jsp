@@ -23,7 +23,7 @@
             throw new Exception("데이터베이스에 연결할 수 없습니다.");
 			
         stmt = conn.createStatement();
-        String command = String.format("insert into amp " +
+        String command = String.format("insert into student " +
                   "(student_email, password, name, major_name, school_name) values ('%s', '%s', '%s', '%s', '%s');",
                   email, password, name, major, school);
         int rowNum = stmt.executeUpdate(command);
