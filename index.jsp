@@ -8,6 +8,7 @@
 <head>
 	
 	<meta charset="utf-8">
+	
 	<title>All My Professors</title>
 	<link href="./css/style.css" rel="stylesheet" type="text/css">	
 	<script type="text/JavaScript" src="./jquery-1.8.2.min.js"></script>
@@ -39,18 +40,14 @@
 					</select>
 					
 					
-					<input type=submit value="검색" style="width:100px"> </a>
+					<input type=submit value="검색" style="width:100px">
 				</form>					
 			</div>
 		
 
 			
 			<div id="footer">			
-								<p> 
-									사이트소개 | 이용약관 | 개인정보취급방침 | 고객센터
-								</p>			
-								<p> Copyright(c) All My Professors. All rights reserved.
-								</p>
+				<jsp:include page="footer.jsp" flush="false" />
 			</div>
 			
 		</div>
