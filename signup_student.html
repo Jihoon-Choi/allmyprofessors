@@ -16,7 +16,7 @@
 	<div id="siteWrap">
 		<div id="header">
 			<div id="header_left">
-				<a href="./index.html"><img src="./img/logo.png" width="200px" height="100px"></a>
+				<a href="./index.jsp"><img src="./img/logo.png" width="200px" height="100px"></a>
 			</div>					
 			
 			<div id="header_right">			
@@ -37,19 +37,21 @@
 			<p> Creating an account will let you rate professors, leave comments, and more.</p>
 			<div id="ifprof">당신이 교수면, 특별한 계정이 필요하다. <a href="./ref_signup_prof.html">CLICK</a>이곳을 눌러서 교수용 계정으로 가입해라.</div>
 			
-			<form action=/amp/confirm.jsp method=POST>
+
 				<div id="contents">
 				<ul>
+					<form action="/amp/signup_student.jsp" method="POST">
 					<li>email<input type="text" id="email" name="email">  </li>
-					<li>Password<input type="text" id="passwd" name="passwd">  </li>
-					<li>Password confirm <input type="text" id="passwd_conform" name="passwd2"> </li>
+					<li>Password<input type="text" id="passwd" name="passwd">  </li>					
+					<li>Name <input type="text" id="name" name="name"> </li>
 					<li>School<input type="text" id="school" name="school">  </li>
 					<li>Major <input type="text" id="major" name="major"> </li>
 						 <input type="checkbox">동의합니다
 				</ul>
 				<input type="submit" value="제출">
+				</form>
 				</div>
-			</form>
+			
 				
 			
 			
