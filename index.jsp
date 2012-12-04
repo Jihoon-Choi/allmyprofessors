@@ -24,13 +24,13 @@
 		<div id="siteWrap">
 			<div id="header">
 				<a href="./login.jsp"><input type="button" value="Login" style="width:100px"></a>
-				<a href="./signup_student.html"><input type="button" value="Sign-up" style="width:100px"></a>						
+				<a href="./signup_student.jsp"><input type="button" value="Sign-up" style="width:100px"></a>						
 			</div>
 			
 			<div id="contents_main">
 				<img src="./img/logo.png" style="width:300px"><br/>
 					
-				<form ACTION="/amp/professor.jsp" METHOD="get">
+				<form ACTION="./professor.jsp" METHOD="get">
 					
 					<input type=text name=keyword id="search_box" style="width:300px">	
 						

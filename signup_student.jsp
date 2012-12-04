@@ -1,47 +1,100 @@
-<%@page contentType="text/html; charset=euc-kr" errorPage="DBError.jsp" %>
-<%@page import="java.sql.*"%>
-<%
-    
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 	
-	String email = request.getParameter("email");  
-    String password = request.getParameter("passwd");
-	String name = request.getParameter("name");
-	String school = request.getParameter("school");
-    String major = request.getParameter("major");	
 	
-    if (email == null || password == null || name == null) 
-        throw new Exception("µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÏ½Ê½Ã¿À.");
-    
-	Connection conn = null;
-    Statement stmt = null;
-    
-	try {
-        Class.forName("com.mysql.jdbc.Driver");
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>All My Professors</title>
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div id="header">
+			<jsp:include page="header.jsp" flush="false"/>
+	</div>
+	
+	<div id="nav">
+		<jsp:include page="navbar.jsp" flush="false"/>
+	</div>
 		
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");
-        if (conn == null)
-            throw new Exception("µ¥ÀÌÅÍº£ÀÌ½º¿¡ ¿¬°áÇÒ ¼ö ¾ø½À´Ï´Ù.");
+		
+  <div id="contentsWrap">
+	<%	if (request.getMethod() == "POST") { %>
+		 <div class="well">
+		  <ul>
+		    <li>E-mail : <%=request.getParameter("Email")%></li>
+		    <li>Mame : <%=request.getParameter("name")%></li>
+		    <li>Password : <%=request.getParameter("passwd")%></li>
+		    <li>School : <%=request.getParameter("school")%></li>
+		    <li>Major : <%=request.getParameter("major")%></li>		    
+			</ul>
+		 </div>
+	<%} else { %>
+		<div>
+		<p> Create an Account </p>
+			<p> Creating an account will let you rate professors, leave comments, and more.</p>
+			<div id="ifprof">ë‹¹ì‹ ì´ êµìˆ˜ë©´, íŠ¹ë³„í•œ ê³„ì •ì´ í•„ìš”í•˜ë‹¤. <a href="./signup_prof.html">CLICK</a>ì´ê³³ì„ ëˆŒëŸ¬ì„œ êµìˆ˜ìš© ê³„ì •ìœ¼ë¡œ ê°€ì…í•´ë¼.</div>
 			
-        stmt = conn.createStatement();
-        String command = String.format("insert into student " +
-                  "(student_email, password, name, major_name, school_name) values ('%s', '%s', '%s', '%s', '%s');",
-                  email, password, name, major, school);
-        int rowNum = stmt.executeUpdate(command);
-		
-        if (rowNum < 1)
-            throw new Exception("µ¥ÀÌÅÍ¸¦ DB¿¡ ÀÔ·ÂÇÒ ¼ö ¾ø½À´Ï´Ù.");
-    }
-    finally {
-        try { 
-            stmt.close();
-        } 
-        catch (Exception ignored) {
-        }
-        try { 
-            conn.close();
-        } 
-        catch (Exception ignored) {
-        }
-    }
-    response.sendRedirect("signup_student_after.jsp");
-%>
+			  <h1>íšŒì›ê°€ì…</h1>
+
+			  <form class="form-horizontal" method="post">
+				<fieldset>
+					<div id="legend">
+						<legend>Sign up</legend>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label" for="email">E-mail</label>
+						<div class="controls">
+							<input type="email" placeholder="hong@abc.com" name="email">
+						</div>
+					</div>
+					
+					
+					<div class="control-group">
+						<label class="control-label" for="name">Name</label>
+						<div class="controls">
+							<input type="text" placeholder="í™ê¸¸ë™" name="name">
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="pwd">Password</label>
+						<div class="controls">
+							<input type="password" name="pwd">
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="school">School</label>
+						<div class="controls">
+							<input type="text" name="school">
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="major">major</label>
+						<div class="controls">
+							<input type="text" name="major">
+						</div>
+					</div>				
+
+					
+
+					<div class="form-actions">
+						<input type="submit" class="btn btn-primary">
+					</div>
+				</fieldset>
+			  </form>
+		</div>
+	<% } %>
+  </div>
+  
+</body>
+</html>
+
