@@ -25,18 +25,18 @@
 		</div>
 	<!--교수랭킹-->
 	
-		
+	
 		<div id="contentsWrap">
-			
-			<ul>
-				<li>성<input type="text"></li>
-				<li>이름<input type="text"></li>
-				<li>학교<input type="text"></li>
-				<li>전공<input type="text"></li>
-				<li>강좌<input type="text"></li>
-				<input type="button" value="추가하기">
-			</ul>		
-			
+			<form action="db_success.jsp" method="post">
+				<ul>
+					<li>Email<input type="text" name="email"></li>
+					<li>Name<input type="text" name="name"></li>
+					<li>School<input type="text" name="school"></li>
+					<li>Phone<input type="text" name="phone"></li>
+					<li>Major<input type="text" name="major"></li>
+					<input type="submit" value="추가하기">
+				</ul>		
+			</form>
 		</div>
 		
 		<div id="footer">			
