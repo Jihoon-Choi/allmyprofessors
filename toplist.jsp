@@ -34,11 +34,7 @@
 		</div>
 		
 		<div id="footer">			
-			<p> 
-				사이트소개 | 이용약관 | 개인정보취급방침 | 고객센터
-			</p>			
-			<p> Copyright(c) Choi Jihoon. All rights reserved.
-			</p>
+			<jsp:include page="footer.jsp" flush="false" />
 		</div>
 	
 	</div>
