@@ -22,29 +22,9 @@
 		</div>
 		
 		<div id="nav">
-<<<<<<< HEAD
+
 			<jsp:include page="navbar.jsp" flush="false"/>
-=======
-		
-			<ul>
-				<li id="navhome">
-					<a href="#">HOME</a>
-					</li>
-				<li id="nav_about">
-					<a href="./about.jsp">About</a>
-					</li>
-				<li id="nav_professor">
-					<a href="./professor.jsp">Professor</a>
-					</li>
-				<li id="nav_school">
-					<a href="./school.jsp">School</a>
-					</li>
-				<li id="nav_toplist">
-					<a href="./toplist.jsp">Top List</a>
-					</li>
-				
-			</ul>
->>>>>>> f132cb75380e1f85be83aff3c4a6b7960530ea27
+
 		</div>
 
 	<!--교수랭킹-->
