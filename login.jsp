@@ -1,11 +1,36 @@
-﻿<!DOCTYPE html>
+﻿<%@ page language="java" contentType="text/html; charset=utf-8"
+ 	errorPage="loginerror.jsp" 
+    pageEncoding="utf-8"%>
+
+
+<!DOCTYPE html>
 <html lang="ko">
 
 <head>
 	<meta charset="utf-8">
 	<title>All My Professors</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">	
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<SCRIPT LANGUAGE="JavaScript">
 	
+	function go_login(){
+	if(document.login.email.value.length<=0){
+			alert("Email를 입력하세요");
+			document.login.email.focus();
+			return false;
+	}
+	if(document.login.userpw.value.length<=0){
+			alert("password를 입력하세요");
+			document.login.passwd.focus();
+			return false;
+	}
+	document.login.submit();
+	}
+	function move_focus(){
+	document.login.email.focus();
+	return;
+	}
+	
+	</SCRIPT>	
 </head>
 
 	
@@ -34,7 +59,7 @@
 			
 			<!--로그인 박스-->
 			
-			<form action="/login.jsp" method="get">
+			<form action="/amp/login_after.jsp" method="get">
 				<div id="login_windows">
 					<!--로그인에서의 id입력-->
 					<div id="enter_id">
@@ -46,7 +71,7 @@
 						<p>Password</p><input type="password" name="passwd">
 					</div>
 
-					<input type="submit" value="LOG-IN"></a>
+					<a href="javascript:go_login()"><input type="submit" value="LOG-IN"></a>
 				</div>
 			</form>
 		</div>

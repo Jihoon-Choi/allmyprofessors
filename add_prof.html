@@ -1,4 +1,4 @@
-﻿<%@page contentType="text/html; charset=utf-8"%>
+﻿
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -21,7 +21,7 @@
 			</div>
 			
 			<div id="header_left">
-				<a href="./index.jsp"><img src="./img/logo.png" width="170px" height="90px"></a>
+				<a href="#"><img src="./img/logo.png" width="170px" height="90px"></a>
 			</div>					
 				
 			<div id="header_search">
@@ -31,25 +31,41 @@
 				
 		</div>
 		
-		<div id="nav">		
+		<div id="nav">
+		
 			<ul>
-				<li id="navhome">   <a href="./index.jsp">HOME</a>   </li>
-				<li id="nav_about"> <a href="./about.jsp">About</a></li>
-				<li id="nav_professor">	<a href="/professor.jsp">Professor</a>		</li>
-				<li id="nav_school">	<a href="./school.jsp">School</a>	</li>
-				<li id="nav_toplist"><a href="./toplist.jsp">Top List</a>	</li>			
+				<li id="navhome">
+					<a href="#">HOME</a>
+					</li>
+				<li id="nav_about">
+					<a href="./about.jsp">About</a>
+					</li>
+				<li id="nav_professor">
+					<a href="./professor.jsp">Professor</a>
+					</li>
+				<li id="nav_school">
+					<a href="./school.jsp">School</a>
+					</li>
+				<li id="nav_toplist">
+					<a href="./toplist.jsp">Top List</a>
+					</li>
+				
 			</ul>
 		</div>
+	<!--교수랭킹-->
+	
 		
-		
-	<!--교수랭킹-->		
 		<div id="contentsWrap">
-			<h1>it's top list!!!!!!!!!!!</h1>
-			<ul>
-				<li></li>
-			</ul>
 			
-		
+			<ul>
+				<li>성<input type="text"></li>
+				<li>이름<input type="text"></li>
+				<li>학교<input type="text"></li>
+				<li>전공<input type="text"></li>
+				<li>강좌<input type="text"></li>
+				<input type="button" value="추가하기">
+			</ul>		
+			
 		</div>
 		
 		<div id="footer">			
@@ -58,6 +74,11 @@
 			</p>			
 			<p> Copyright(c) Choi Jihoon. All rights reserved.
 			</p>
+		</div>
+
+		<div id="footerSearch">
+			<input type="text">
+			<input type="button" value="search">
 		</div>
 	
 	</div>
