@@ -15,25 +15,16 @@
 
 	
 <body>
+
 	<div id="siteWrap">		
 		<div id="header">
-			<div id="header_top">			
-				<input type="button" value="Login" style="width:100px" disabled="disabled">
-				<input type="button" value="Sign-up" style="width:100px" >
-			</div>
-			
-			<div id="header_left">
-				<a href="#"><img src="./img/logo.png" width="170px" height="90px"></a>
-			</div>					
-				
-			<div id="header_search">
-				<input type="text">
-				<input type="button" value="Search">			
-			</div>
-				
+			<jsp:include page="header.jsp" flush="false"/>
 		</div>
 		
 		<div id="nav">
+<<<<<<< HEAD
+			<jsp:include page="navbar.jsp" flush="false"/>
+=======
 		
 			<ul>
 				<li id="navhome">
@@ -53,7 +44,9 @@
 					</li>
 				
 			</ul>
+>>>>>>> f132cb75380e1f85be83aff3c4a6b7960530ea27
 		</div>
+
 	<!--교수랭킹-->
 	
 		
@@ -87,25 +80,11 @@
 		</div>
 		
 		<div id="footer">			
-			<p> 
-				사이트소개 | 이용약관 | 개인정보취급방침 | 고객센터
-			</p>			
-			<p> Copyright(c) Choi Jihoon. All rights reserved.
-			</p>
-		</div>
-
-		<div id="footerSearch">
-			<input type="text">
-			<input type="button" value="search">
+	<jsp:include page="footer.jsp" flush="false" />
 		</div>
 	
 	</div>
 
-		
-	
-		
-		
-	
 </body>
 
 </html>
