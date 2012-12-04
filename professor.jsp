@@ -9,10 +9,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>All My Professors</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">	
-	
+	<link href="./css/style.css" rel="stylesheet" type="text/css">		
 </head>
-
 	
 <body>
 
@@ -31,7 +29,7 @@
 					<div id="proSearch">
 						<input type="text">
 						<input type="button" value="search">
-						<p>교수님을 등록하시려면 <a href="./add_prof.html">Click</a>해 주세요.</p>
+						<p>교수님을 등록하시려면 <a href="./add_prof.jsp">Click</a>해 주세요.</p>
 					</div>
 				</div>
 				<div id="searchContents">
