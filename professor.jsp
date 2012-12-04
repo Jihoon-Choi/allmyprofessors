@@ -19,17 +19,11 @@
 	<div id="siteWrap">		
 		<div id="header">
 			<jsp:include page="header.jsp" flush="false"/>
-		</div>
-		
+		</div>		
 		<div id="nav">
-
 			<jsp:include page="navbar.jsp" flush="false"/>
-
 		</div>
-
-	<!--교수랭킹-->
-	
-		
+	<!--교수랭킹-->		
 		<div id="contentsWrap">
 			<div class="wrapper">
 				안녕하세요, <%= request.getParameter("keyword") %>으로 검색하셨군요!!!
@@ -60,7 +54,7 @@
 		</div>
 		
 		<div id="footer">			
-	<jsp:include page="footer.jsp" flush="false" />
+			<jsp:include page="footer.jsp" flush="false" />
 		</div>
 	
 	</div>
