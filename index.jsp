@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="UTF-8" import="java.util.*" import="java.sql.*" %>
+	pageEncoding="utf-8" import="java.util.*" import="java.sql.*" %>
 
 
 <!DOCTYPE html>
@@ -22,15 +22,15 @@
 	
 		<div id="siteWrap">
 			<div id="header">
-				<a href="./login.html"><input type="button" value="Login" style="width:100px"></a>
+				<a href="./login.jsp"><input type="button" value="Login" style="width:100px"></a>
 				<a href="./signup_student.html"><input type="button" value="Sign-up" style="width:100px"></a>						
 			</div>
 			
 			<div id="contents_main">
 				<img src="./img/logo.png" style="width:300px"><br/>
 					
-				<FORM ACTION=/amp/professor.jsp METHOD=GET>
-					It's JSP Page
+				<form ACTION="/amp/professor.jsp" METHOD="get">
+					
 					<input type=text name=keyword id="search_box" style="width:300px">	
 						
 					<select name=sel>

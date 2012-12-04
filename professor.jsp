@@ -1,5 +1,5 @@
-﻿<%@page contentType="text/html; charset=utf-8"%>
-
+﻿<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8" import="java.util.*" import="java.sql.*" %>
 
 
 <!DOCTYPE html>
@@ -64,7 +64,7 @@
 					<div id="proSearch">
 						<input type="text">
 						<input type="button" value="search">
-						<p>교수님을 등록하시려면 <a href="./ref_add_prof.html">Click</a>해 주세요.</p>
+						<p>교수님을 등록하시려면 <a href="./add_prof.html">Click</a>해 주세요.</p>
 					</div>
 				</div>
 				<div id="searchContents">
