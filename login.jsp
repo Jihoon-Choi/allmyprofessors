@@ -10,47 +10,40 @@
 	<meta charset="utf-8">
 	<title>All My Professors</title>
 	<link href="./css/style.css" rel="stylesheet" type="text/css">
-	<SCRIPT LANGUAGE="JavaScript">
 	
-	function go_login(){
-	if(document.login.email.value.length<=0){
-			alert("Email를 입력하세요");
-			document.login.email.focus();
-			return false;
-	}
-	if(document.login.userpw.value.length<=0){
-			alert("password를 입력하세요");
-			document.login.passwd.focus();
-			return false;
-	}
-	document.login.submit();
-	}
-	function move_focus(){
-	document.login.email.focus();
-	return;
-	}
-	
-	</SCRIPT>	
 </head>
 
 	
 <body>
+
+<%
+  if (request.getMethod() == "POST") {
+	  String id = request.getParameter("id");
+	  String pwd = request.getParameter("passwd");
+	  
+	  if (id == null || pwd == null || id.length() == 0 || pwd.length() == 0) {
+		  %>
+		   <div class="error">아이디와 비밀번호를 입력하세요.</div>
+		  <%
+	  } else if (id.equals("iu") && pwd.equals("12345")) {
+		  // 로그인 성공
+	      session.setAttribute("userId", "iu");
+	      session.setAttribute("userName", "이지은");	
+	      response.sendRedirect("ex2.jsp");	      
+		 } else {
+		  %>
+		   <div class="error">아이디나 비밀번호가 잘못되었습니다.</div>
+		  <%
+	  }
+	  
+  }
+  %>
 	<div id="siteWrap">
 		<div id="header">
-			<div id="header_left">
-				<a href="./index.jsp"><img src="./img/logo.png" width="200px" height="100px"></a>
-			</div>					
-			
-			<div id="header_right">			
-				<input type="button" value="Login" style="width:100px" disabled="disabled">
-				<input type="button" value="Sign-up" style="width:100px" >
-			</div>
-			
-			<div id="header_search">
-				<input type="text">
-				<input type="button" value="Search">			
-			</div>
-			
+			<jsp:include page="header.jsp" flush="false"/>
+		</div>		
+		<div id="nav">
+			<jsp:include page="navbar.jsp" flush="false"/>
 		</div>
 	
 		<div id="contentsWrap">
@@ -59,19 +52,11 @@
 			
 			<!--로그인 박스-->
 			
-			<form action="/amp/login_after.jsp" method="get">
-				<div id="login_windows">
-					<!--로그인에서의 id입력-->
-					<div id="enter_id">
-						<p>E-Mail</p><input type="text" name="email">				
-					</div>
-					
-					<!--로그인에서의 password입력-->
-					<div id="enter_password">
+			<form method="post">
+				<div id="login_windows">					
+						<p>E-Mail</p><input type="text" name="email">					
 						<p>Password</p><input type="password" name="passwd">
-					</div>
-
-					<a href="javascript:go_login()"><input type="submit" value="LOG-IN"></a>
+						<input type="submit" value="LOG-IN"></a>
 				</div>
 			</form>
 		</div>
