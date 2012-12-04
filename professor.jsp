@@ -1,0 +1,91 @@
+﻿<%@page contentType="text/html; charset=utf-8"%>
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+	<meta charset="utf-8">
+	<title>All My Professors</title>
+	<link href="./css/style.css" rel="stylesheet" type="text/css">	
+	
+</head>
+
+	
+<body>
+
+	<div id="siteWrap">		
+		<div id="header">
+			<jsp:include page="header.jsp" flush="false"/>
+		</div>
+		
+		<div id="nav">
+<<<<<<< HEAD
+			<jsp:include page="navbar.jsp" flush="false"/>
+=======
+		
+			<ul>
+				<li id="navhome">
+					<a href="#">HOME</a>
+					</li>
+				<li id="nav_about">
+					<a href="./about.jsp">About</a>
+					</li>
+				<li id="nav_professor">
+					<a href="./professor.jsp">Professor</a>
+					</li>
+				<li id="nav_school">
+					<a href="./school.jsp">School</a>
+					</li>
+				<li id="nav_toplist">
+					<a href="./toplist.jsp">Top List</a>
+					</li>
+				
+			</ul>
+>>>>>>> f132cb75380e1f85be83aff3c4a6b7960530ea27
+		</div>
+
+	<!--교수랭킹-->
+	
+		
+		<div id="contentsWrap">
+			<div class="wrapper">
+				안녕하세요, <%= request.getParameter("keyword") %>으로 검색하셨군요!!!
+				<div id="searchMap">
+					<div id="proSearch">
+						<input type="text">
+						<input type="button" value="search">
+						<p>교수님을 등록하시려면 <a href="./ref_add_prof.html">Click</a>해 주세요.</p>
+					</div>
+				</div>
+				<div id="searchContents">
+					<div class="pagination">
+						<a href="#" class="direction"><span>&lsaquo;</span>이전</a>
+						<a href="#">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#">6</a>
+						<a href="#">7</a>
+						<a href="#">8</a>
+						<a href="#">9</a>
+						<a href="#">10</a>
+						<a href="#" class="direction"><span>&rsaquo;</span>다음</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footer">			
+	<jsp:include page="footer.jsp" flush="false" />
+		</div>
+	
+	</div>
+
+</body>
+
+</html>
+
