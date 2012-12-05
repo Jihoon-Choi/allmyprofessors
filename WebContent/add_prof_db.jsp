@@ -22,7 +22,7 @@
             throw new Exception("데이터베이스에 연결할 수 없습니다.");
 			
         stmt = conn.createStatement();
-        String command = String.format("insert into addprof" +
+        String command = String.format("insert into reputation" +
                   "(school, name, major,comment) values ('%s','%s','%s','%s');",
                   school, name, major, comment);
         int rowNum = stmt.executeUpdate(command);
