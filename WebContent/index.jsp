@@ -30,11 +30,11 @@
 			<div id="contents_main">
 				<img src="./img/logo.png" style="width:300px"><br/>
 					
-				<form ACTION="./professor.jsp" METHOD="get">
+				<form ACTION="./index_stu_or_prof.jsp" METHOD="get">
 					
-					<input type=text name=keyword id="search_box" style="width:300px">	
+					<input type=text name="keyword" id="search_box" style="width:300px">	
 						
-					<select name=sel>
+					<select name="sel">
 						<option value="1"> 교수 </option>
 						<option value="2"> 학교 </option>
 					</select>
