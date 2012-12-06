@@ -2,9 +2,10 @@
 <%@page import="java.sql.*"%>
 <%
     
-	
+	request.setCharacterEncoding("euc-kr");
 	String str = request.getParameter("keyword");  
 	String sel = request.getParameter("sel");
+	
 	
 	if(sel.equals("1")){
 			RequestDispatcher dispatcher = request.getRequestDispatcher("professor.jsp");		  

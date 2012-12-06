@@ -28,12 +28,15 @@
 		
 		<div id="contentsWrap">
 			<div class="wrapper">
+			<%
+				request.setCharacterEncoding("euc-kr");
+			%>
 				안녕하세요, <%= request.getParameter("keyword") %>으로 검색하셨군요!!!
 				<div id="searchMap">
 					<div id="proSearch">
 						<input type="text">
 						<input type="button" value="search">
-						<p>학교를 등록하시려면 <a href="./ref_add_school.html">Click</a>해 주세요.</p>
+						<p>학교를 등록하시려면 <a href="./add_school.jsp">Click</a>해 주세요.</p>
 					</div>
 				</div>
 				<div id="searchContents">

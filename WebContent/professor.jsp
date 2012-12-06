@@ -24,6 +24,9 @@
 	<!--교수랭킹-->		
 		<div id="contentsWrap">
 			<div class="wrapper">
+			<%
+			request.setCharacterEncoding("euc-kr");
+			%>
 				안녕하세요, <%= request.getParameter("keyword") %>으로 검색하셨군요!!!
 				<div id="searchMap">
 					<div id="proSearch">

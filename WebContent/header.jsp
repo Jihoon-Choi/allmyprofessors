@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="euc-kr"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,11 +18,11 @@
 			</div>
 			
 			<div id="header_left">
-				<a href="#"><img src="./img/logo.png" width="170px" height="90px"></a>
+				<a href="./index.jsp"><img src="./img/logo.png" width="170px" height="90px"></a>
 			</div>					
 				
 			<div id="header_search">
-				<FORM ACTION=/amp/professor.jsp METHOD=GET>
+				<FORM ACTION="./amp/professor.jsp" METHOD="GET">
 				<input type="text">
 				<input type="button" value="Search">
 				</FORM>			
