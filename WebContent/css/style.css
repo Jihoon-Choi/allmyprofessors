@@ -1,0 +1,100 @@
+@import url(http://fonts.googleapis.com/css?family=Autour+One);
+@import url(http://fonts.googleapis.com/css?family=Finger+Paint);
+@import url(http://fonts.googleapis.com/css?family=Marcellus+SC);
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+input,button,textarea,select{font-size:100%;}
+
+body {
+background: url("../img/bg.png") repeat-x scroll 0 0;
+font: 15px "trebuchet ms",helvetica,arial,sans-serif;
+}
+
+#siteWrap{
+width: 960px;
+margin: 25px auto 0px auto;
+}
+
+#header_left{
+height:100px;
+float:left;
+}
+
+#header_search{
+margin:20px 0 0 0;
+}
+
+#header{
+
+text-align:right;
+height:120px;
+
+}
+
+
+
+#nav{
+margin : 20px 0;
+height : 40px;
+}
+
+#nav li{
+float :left;
+border-right:1px solid #eee;
+
+}
+#nav li a{
+
+padding : 7px 20px;
+font-family: 'Montserrat', sans-serif;
+color: #000;
+font-size : 15pt;
+
+}
+
+#contentsWrap{
+height:300px;
+margin:0 auto;
+padding:10px 10px;
+background-color:#fff;
+}
+
+#contents_main{
+height:300px;
+margin:0 auto;
+padding:10px 10px;
+text-align:center;
+}
+
+
+#footer{
+height:70px;
+padding : 30px;
+margin: 0 auto;
+text-align:center;
+}
+
+
+
+#login_windows{
+clear:both;
+}
+
+
+
+
+

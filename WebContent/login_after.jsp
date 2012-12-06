@@ -1,5 +1,28 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8" %>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ë¡œê·¸ì¸ í›„ í…ŒìŠ¤íŠ¸</title>
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h2>ë¡œê·¸ì¸ í›„ í…ŒìŠ¤íŠ¸</h2>
 <%
+request.setCharacterEncoding("euc-kr");
+String email=request.getParameter("email");
+String passwd=request.getParameter("passwd");
+
+if(email!=null && passwd!=null){
+	session.setAttribute("email",email);
+	session.setAttribute("passwd",passwd);
+}
+%>
+<h3><%=email %>ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤.</h3>
+
+</body></html>
+
+
+<%-- <%
 String userid=request.getParameter("email");
 String passwd=request.getParameter("passwd");
 %>
@@ -7,18 +30,18 @@ String passwd=request.getParameter("passwd");
 
 <html>
 <head>
-<title>È¸¿øÀÎÁõ</title>
+<title>È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</title>
 <meta http-equiiv="Content-Type" content="text/html" charset="euc-kr">
 <SCRIPT LANGUAGE="JavaScript">
 function fail_login(){
         var email="<%=email%>";
         var passwd="<%=passwd%>";
         if(userid!="webmaster"){
-           alert("·Î±×ÀÎ ¾ÆÀÌµğ°¡ Æ²¸³´Ï´Ù.");
+           alert("ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìµï¿½ Æ²ï¿½ï¿½ï¿½Ï´ï¿½.");
            history.go(-1);
         }
         else if(passwd!="manager"){
-           alert("ºñ¹Ğ¹øÈ£°¡ Æ²¸³´Ï´Ù.");
+           alert("ï¿½ï¿½Ğ¹ï¿½È£ï¿½ï¿½ Æ²ï¿½ï¿½ï¿½Ï´ï¿½.");
            history.go(-1);
         }
 }
@@ -28,4 +51,4 @@ function fail_login(){
 
 </body>
 </html>
- 
+--%>

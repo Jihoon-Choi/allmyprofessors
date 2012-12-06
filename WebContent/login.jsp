@@ -1,8 +1,28 @@
-﻿<%@ page language="java" contentType="text/html; charset=utf-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+ pageEncoding="UTF-8"%>
+<%@ page import="login.MemberDao" %>
+<%@ page import="java.sql.*" %>
+<%
+ request.setCharacterEncoding("UTF-8"); //한글이 깨지지 않게 하기
+ String id = request.getParameter("id");
+ String pw = request.getParameter("pw");
+ MemberDao dao = new MemberDao();
+ int flag = dao.checkIdPw(id, pw);
+ //out.println("flag="+flag);
+ if(flag == 0) { //틀린 경우
+  response.sendRedirect("login_fail.jsp");
+ } else if(flag == 1) { //맞은 경우
+  response.sendRedirect("login_ok.jsp");
+ }
+%>
+
+
+
+
+<%--<%@ page language="java" contentType="text/html; charset=utf-8"
  	errorPage="loginerror.jsp" 
     pageEncoding="utf-8"%>
-
-
+    
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -18,18 +38,18 @@
 
 <%
   if (request.getMethod() == "POST") {
-	  String id = request.getParameter("id");
+	  String email = request.getParameter("email");
 	  String pwd = request.getParameter("passwd");
 	  
-	  if (id == null || pwd == null || id.length() == 0 || pwd.length() == 0) {
+	  if (email == null || pwd == null || email.length() == 0 || pwd.length() == 0) {
 		  %>
 		   <div class="error">아이디와 비밀번호를 입력하세요.</div>
 		  <%
-	  } else if (id.equals("iu") && pwd.equals("12345")) {
+	  } else if (email.equals("iu") && pwd.equals("12345")) {
 		  // 로그인 성공
-	      session.setAttribute("userId", "iu");
+	      session.setAttribute("useremail", "iu");
 	      session.setAttribute("userName", "이지은");	
-	      response.sendRedirect("ex2.jsp");	      
+//	      response.sendRedirect("ex2.jsp");	      
 		 } else {
 		  %>
 		   <div class="error">아이디나 비밀번호가 잘못되었습니다.</div>
@@ -56,22 +76,18 @@
 				<div id="login_windows">					
 						<p>E-Mail</p><input type="text" name="email">					
 						<p>Password</p><input type="password" name="passwd">
-						<input type="submit" value="LOG-IN"></a>
+						<input type="submit" value="LOG-IN">
 				</div>
 			</form>
 		</div>
 		
 		
 		<div id="footer">			
-				<p> 
-					사이트소개 | 이용약관 | 개인정보취급방침 | 고객센터
-				</p>			
-				<p> Copyright(c) Choi Jihoon. All rights reserved.
-				</p>
+				<jsp:include page="footer.jsp" flush="false"/>
 		</div>
 		
 	</div>
 	
 </body>
-
 </html>
+--%>
