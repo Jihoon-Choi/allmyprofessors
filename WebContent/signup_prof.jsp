@@ -1,47 +1,122 @@
-<%@page contentType="text/html; charset=euc-kr" errorPage="DBError.jsp" %>
-<%@page import="java.sql.*"%>
-<%
-    
+ï»¿<%@page contentType="text/html; charset=utf-8"%>
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<title>All My Professors</title>
+	<link href="./css/style.css" rel="stylesheet" type="text/css">	
+	<script type="text/JavaScript" src="./jquery-1.8.2.min.js"></script>
 	
-	String email = request.getParameter("email");  
-    String password = request.getParameter("passwd");
-	String name = request.getParameter("name");
-	String school = request.getParameter("school");
-    String major = request.getParameter("major");	
+</head>
+
 	
-    if (email == null || password == null || name == null) 
-        throw new Exception("µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÏ½Ê½Ã¿À.");
-    
-	Connection conn = null;
-    Statement stmt = null;
-    
-	try {
-        Class.forName("com.mysql.jdbc.Driver");
-		
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");
-        if (conn == null)
-            throw new Exception("µ¥ÀÌÅÍº£ÀÌ½º¿¡ ¿¬°áÇÒ ¼ö ¾ø½À´Ï´Ù.");
+<body>
+
+	<!--íšŒì›ê°€ì…_í•™ìƒìš©-->
+	<div id="siteWrap">
+		<div id="header">
+			<div id="header_left">
+				<a href="./index.jsp"><img src="./img/logo.png" width="200px" height="100px"></a>
+			</div>					
 			
-        stmt = conn.createStatement();
-        String command = String.format("insert into student " +
-                  "(student_email, password, name, major_name, school_name) values ('%s', '%s', '%s', '%s', '%s');",
-                  email, password, name, major, school);
-        int rowNum = stmt.executeUpdate(command);
+			<div id="header_right">			
+				<input type="button" value="Login" style="width:100px" disabled="disabled">
+				<input type="button" value="Sign-up" style="width:100px" >
+			</div>
+			
+			<div id="header_search">
+				<input type="text">
+				<input type="button" value="Search">			
+			</div>
+			
+		</div>
+	
 		
-        if (rowNum < 1)
-            throw new Exception("µ¥ÀÌÅÍ¸¦ DB¿¡ ÀÔ·ÂÇÒ ¼ö ¾ø½À´Ï´Ù.");
-    }
-    finally {
-        try { 
-            stmt.close();
-        } 
-        catch (Exception ignored) {
-        }
-        try { 
-            conn.close();
-        } 
-        catch (Exception ignored) {
-        }
-    }
-    response.sendRedirect("signup_student_after.jsp");
-%>
+		<div id="contentsWrap">
+			<form action="./signup_prof_db.jsp" method="post">
+				<ul>
+					<li>Email<input type="text" name="email">  </li>
+					<li>Password<input type="text" name="passwd">  </li>
+					<li>name<input type="text" name="name"></li>
+					<li>School<input type="text" name="school"></li>
+					<li>Major<input type="text" name="major"></li>
+					<li>Phone<input type="text" name="phone"></li>
+					
+					 <input type="checkbox">ë™ì˜í•©ë‹ˆë‹¤			
+				</ul>					
+				<input type="submit" value="ê°€ì…ì™„ë£Œ">
+			</form>
+			
+		</div>
+
+	
+	<div id="footer">			
+			<p> 
+				ì‚¬ì´íŠ¸ì†Œê°œ | ì´ìš©ì•½ê´€ | ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨ | ê³ ê°ì„¼í„°
+			</p>			
+			<p> Copyright(c) Choi Jihoon. All rights reserved.
+			</p>
+	</div>
+	</div>
+		
+		
+	
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+	<meta charset="utf-8">
+	<title>All My Professors</title>
+	<link href="./css/style.css" rel="stylesheet" type="text/css">	
+	
+</head>
+
+	
+<body>
+
+	<!--íšŒì›ê°€ì…_êµìˆ˜ìš©-->
+	<div id="siteWrap">
+		<div id="contents">
+			
+			
+		
+		</div>
+	
+	</div>
+
+		
+	<div id="footer">			
+			<p> 
+				ì‚¬ì´íŠ¸ì†Œê°œ | ì´ìš©ì•½ê´€ | ê°œì¸ì •ë³´ì·¨ê¸‰ë°©ì¹¨ | ê³ ê°ì„¼í„°
+			</p>			
+			<p> Copyright(c) Choi Jihoon. All rights reserved.
+			</p>
+	</div>
+		
+		
+	
+</body>
+
+</html>
