@@ -6,10 +6,19 @@
 	String str = request.getParameter("keyword");  
 	String sel = request.getParameter("sel");
 	
-	if(sel=1)
-		 response.sendRedirect("professor.jsp");
-	else
-		 response.sendRedirect("school.jsp");
+	if(sel.equals("1")){
+			RequestDispatcher dispatcher = request.getRequestDispatcher("professor.jsp");		  
+		 
+		 dispatcher.forward(request, response); 
+		 
+		 //response.sendRedirect("professor.jsp");
+		 }
+		 
+	else{
+	RequestDispatcher dispatcher = request.getRequestDispatcher("school.jsp");		  
+		  dispatcher.forward(request, response); 
+		// response.sendRedirect("school.jsp");
+		 }
 	
 %>
 
