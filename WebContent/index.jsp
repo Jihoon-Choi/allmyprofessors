@@ -17,8 +17,8 @@
 	
 <body>
 	<% 
-		String path1=application.getRealPath("/amp/searchresult.jsp");
-		String path2=application.getRealPath("/amp/searchresult.jsp");
+		String path1=application.getRealPath("/amp/search-result.jsp");
+		String path2=application.getRealPath("/amp/search-result.jsp");
 		%>
 	
 		<div id="siteWrap">

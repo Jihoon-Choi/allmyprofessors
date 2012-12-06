@@ -10,6 +10,16 @@
 <title>로그인 성공</title>
 </head>
 <body>
+<% 
+request.setCharacterEncoding("euc-kr");
+String email=request.getParameter("email");
+String password=request.getParameter("password");
+
+ if(email!=null && password!=null){
+	session.setAttribute("email",email);
+	session.setAttribute("password",password);
+	}
+%>
 정상 로그인 되었습니다<br>
 메뉴1<br>
 메뉴2<br>

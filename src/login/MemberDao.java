@@ -8,11 +8,11 @@ public class MemberDao {
  public Connection getConn() {
   Connection con = null;
   String url = "jdbc:mysql://localhost:3306/allmyprofessors";
-  String user = "root";
+  String email = "root";
   String password = "1234";
   try {
    Class.forName("com.mysql.jdbc.Driver");
-   con = DriverManager.getConnection(url, user, password);
+   con = DriverManager.getConnection(url, email, password);
   } catch (Exception e) {
    e.printStackTrace();
   }
@@ -20,17 +20,17 @@ public class MemberDao {
  } // getConn
  
  //아이디와 비밀번호가 맞는지 체크
- public int checkIdPw(String id, String pw) {
+ public int checkEmailPw(String email, String password) {
   int flag = 0;
   //JDBC 5단계:드라이버 로딩, 연결, 명령, 결과, 자원해제
   Connection con = getConn();
   PreparedStatement ps = null;
   ResultSet rs = null;
   try{
-   String sql = "select count(*) from student where id=? and pw=?";
+   String sql = "select count(*) from student where email=? and password=?";
    ps = con.prepareStatement(sql);
-   ps.setString(1, id);
-   ps.setString(2, pw);
+   ps.setString(1, email);
+   ps.setString(2, password);
    rs = ps.executeQuery();
    if(rs.next()) {
     flag = rs.getInt(1);
