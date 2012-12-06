@@ -66,10 +66,11 @@ font-size : 15pt;
 
 }
 
-#contentsWrap{
+#contents{
 height:300px;
 margin:0 auto;
 padding:10px 10px;
+text-align:center;
 background-color:#fff;
 }
 
@@ -93,8 +94,3 @@ text-align:center;
 #login_windows{
 clear:both;
 }
-
-
-
-
-

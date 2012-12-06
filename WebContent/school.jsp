@@ -28,6 +28,7 @@
 		
 		<div id="contentsWrap">
 			<div class="wrapper">
+				안녕하세요, <%= request.getParameter("keyword") %>으로 검색하셨군요!!!
 				<div id="searchMap">
 					<div id="proSearch">
 						<input type="text">

@@ -18,8 +18,6 @@
 	<div id="siteWrap">		
 		<div id="header"><jsp:include page="header.jsp" flush="false"/>	</div>
 		<div id="nav"><jsp:include page="navbar.jsp" flush="false"/></div>
-	<!--교수랭킹-->
-	
 	
 		<div id="contentsWrap">
 			<form action="./add_prof_db.jsp" method="post">
@@ -34,15 +32,7 @@
 		</div>
 		
 		<div id="footer"><jsp:include page="footer.jsp" flush="false"/>	</div>
-		
-	
 	</div>
-
-		
-	
-		
-		
-	
 </body>
 
 </html>

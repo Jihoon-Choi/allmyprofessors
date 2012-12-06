@@ -23,18 +23,18 @@
 	
 		<div id="siteWrap">
 			<div id="header">
-				<a href="login.jsp"><input type="button" value="Login" style="width:100px"></a>
-				<a href="signup_student.jsp"><input type="button" value="Sign-up" style="width:100px"></a>						
+				<a href="./login.jsp"><input type="button" value="Login" style="width:100px"></a>
+				<a href="./signup_student.jsp"><input type="button" value="Sign-up" style="width:100px"></a>						
 			</div>
 			
 			<div id="contents_main">
 				<img src="./img/logo.png" style="width:300px"><br/>
 					
-				<form ACTION="./professor.jsp" METHOD="get">
+				<form ACTION="./index_stu_or_prof.jsp" METHOD="get">
 					
-					<input type=text name=keyword id="search_box" style="width:300px">	
+					<input type=text name="keyword" id="search_box" style="width:300px">	
 						
-					<select name=sel>
+					<select name="sel">
 						<option value="1"> 교수 </option>
 						<option value="2"> 학교 </option>
 					</select>

@@ -50,29 +50,21 @@ height:120px;
 #nav{
 margin : 20px 0;
 height : 40px;
-width:950px;
-background-color:#114488;
 }
 
-#nav  ul {margin:0px;padding:0px;}
-
-#nav  ul li{
+#nav li{
 float :left;
 border-right:1px solid #eee;
+
 }
+#nav li a{
 
-#nav  ul li a{
-	
-display:inline-block;
-width:150px;
-text-align:center;
-text-decoration:none;
-font: bold;
+padding : 7px 20px;
+font-family: 'Montserrat', sans-serif;
+color: #000;
+font-size : 15pt;
+
 }
-
-#nav  ul li a.selected {background-color:#94c713}
-#nav  ul li a:hover{background-color:#ddd}
-
 
 #contentsWrap{
 height:300px;
@@ -101,6 +93,7 @@ text-align:center;
 #login_windows{
 clear:both;
 }
+
 
 
 

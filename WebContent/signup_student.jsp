@@ -18,6 +18,7 @@
 			<div id="nav"><jsp:include page="navbar.jsp" flush="false"/></div>
 			
 			<div id="contentsWrap">
+				<p> 교수용 회원가입 바로가기  <a href="./signup_prof.jsp">CLICK</a></p>
 								
 												
 								 
