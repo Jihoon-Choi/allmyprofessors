@@ -1,43 +1,89 @@
-ï»¿<%@ page language="java" contentType="text/html; charset=UTF-8"
- pageEncoding="UTF-8"%>
-<%@ page import="login.MemberDao" %>
+<%@ page contentType = "text/html;charset=euc-kr" %>
 <%@ page import="java.sql.*" %>
-
-<!DOCTYPE html>
+<%@ page import="com.mysql.jdbc.Driver" %>
+ 
+<% request.setCharacterEncoding("euc-kr"); %>
+ 
+<%
+Connection conn = null;
+Statement stmt = null;
+ 
+String jdbc_driver = "com.mysql.jdbc.Driver";
+String jdbc_url = "jdbc:mysql://localhost:3306/amp";
+String sql;
+ 
+String email = null;
+String password = null;
+String userId = request.getParameter("userId"); //ÀÔ·Â¹ŞÀº ID°ª ÀúÀå.
+String userPwd = request.getParameter("userPwd");//ÀÔ·Â¹ŞÀº PASSWORD ÀúÀå.
+ 
+if (request.getMethod().equals("POST")){  //POST·Î ³Ñ±ä°ªÀÌ ÀÖÀ»°æ¿ì Áï, summit¹öÆ°À» Å¬¸¯ÇÑ°æ¿ì
+ try {
+ 
+  Class.forName(jdbc_driver); //JDBC driver ·Îµå
+ 
+  conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","2477"); //DB¿Í ¿¬°á
+ 
+  stmt = conn.createStatement(); //ConnectionÀ¸·ÎºÎÅÍ Statement »ı¼º
+ 
+  ResultSet rs = stmt.executeQuery("Select student_email, password From student"); //SELECT Äõ¸® ½ÇÇà
+  //DB¿¡ È¸¿ø ·¹ÄÚµå°¡ ¾ø´Â °æ¿ì
+  if (!rs.next()){   
+   //insert¹®À¸·Î DB¿¡ È¸¿ø¾ÆÀÌµğ¿Í ÆĞ½º¿öµå ÀúÀå.
+   sql = "insert into student(student_email, password) values ('" + userId + "','" + userPwd + "')";
+   stmt.close();
+   stmt = null; //statement¸¦ ´Ù½Ã »ı¼º.
+   stmt = conn.createStatement();
+   
+   stmt.executeUpdate(sql); //INSERT Äõ¸® ½ÇÇà
+   //È¸¿øÀ» ÀÔ·ÂÇßÀ½À» ¾Ë¸².
+   out.print("<script>");
+   out.print("alert('ID¿Í ÆĞ½º¿öµå¸¦ ÀÔ·ÂÇÏ¿´½À´Ï´Ù.');");
+   out.print("</script>");
+   
+   stmt.close();//statement ´İÀ½.
+    
+   rs.close();//ResultSet ´İÀ½.
+  //DB¿¡ È¸¿øÀÌ ÀÖÀ» °æ¿ì
+  }else{
+   try {  
+     email = rs.getString("email"); //DB¿¡¼­ È¸¿ø ¾ÆÀÌµğ¸¦ °¡Á®¿Í¼­ ÀúÀå
+     password = rs.getString("password"); //DB¿¡¼­ È¸¿ø ÆĞ½º¿öµå¸¦ °¡Á®¿Í¼­ ÀúÀå
+    //DB¿¡ ÀúÀåµÈ ¾ÆÀÌµğ¿Í ÆĞ½º¿öµå¸¦ ÀÔ·ÂÇÑ ¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£¸¦ ºñ±³ÇÑ´Ù.
+    //¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£°¡ ¸ÂÁö ¾Ê´Â °æ¿ì. 
+    if(email.compareTo(userId)!=0 || password.compareTo(userPwd)!=0){
+     out.print("<script>");
+     out.print("alert('ID ¶Ç´Â Password¸¦ Àß¸ø ÀÔ·ÂÇÏ¿´½À´Ï´Ù.');");
+     out.print("</script>");    
+    } else { //¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£°¡ ÀÏÄ¡ÇÏ´Â °æ¿ì
+     out.print("<script>");
+     out.print("alert('ID¿Í Password°¡ ÀÏÄ¡ÇÕ´Ï´Ù.');");
+     out.print("</script>");
+    }
+    
+    rs.close();  //¸ğµç ÀÚ¿øÀ» ´İ¾ÆÁØ´Ù.
+    stmt.close();
+    conn.close();
+        
+   }catch(Exception e){
+    System.out.println(e);
+   }
+  }
+ }catch(Exception e){
+  System.out.println(e);
+ }
+}
+ 
+%>
+<!DOCTYPE HTML>
 <html lang="ko">
 <head>
 	<meta charset="utf-8">
-	<title>ë¡œê·¸ì¸ í…ŒìŠ¤íŠ¸</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<title>·Î±×ÀÎ Å×½ºÆ®</title>
+	<link href="./css/style.css" rel="stylesheet" type="text/css">		
 </head>
-
-<body>	
-
-<%
- request.setCharacterEncoding("UTF-8"); //í•œê¸€ì´ ê¹¨ì§€ì§€ ì•Šê²Œ í•˜ê¸°
- 
- if(request.getMethod()=="POST") {
- String email = request.getParameter("email");
- String password = request.getParameter("password");
- MemberDao dao = new MemberDao();
- int flag = dao.checkEmailPw(email, password);
- //out.println("flag="+flag);
- 
- 	if(flag == 1) { //í‹€ë¦° ê²½ìš°
-  	response.sendRedirect("login_fail.jsp");
- 	} else if(flag == 0) { //ë§ì€ ê²½ìš°
-			session.setAttribute("email", email);
-  		session.setAttribute("password",password);
-  		response.sendRedirect("login_ok.jsp");
- 		} else if(email==null || password==null || email.length()==0 || password.length()==0) {
- 				%>
- 				<div class="error">ì´ë©”ì¼, ë¹„ë°€ë²ˆí˜¸ ì˜ëª»ë¨.</div>
-		<%
- 			}
- }
- %>
- 	
-
+<body>
+<H2>·Î±×ÀÎÈ­¸é</H2>
 <div id="siteWrap">
 		<div id="header">
 			<jsp:include page="header.jsp" flush="false"/>
@@ -50,7 +96,7 @@
 		
 			
 			
-			<!--ë¡œê·¸ì¸ ë°•ìŠ¤-->
+			<!--·Î±×ÀÎ ¹Ú½º-->
 			
 			<form method="post">
 				<div id="login_windows">					
@@ -67,81 +113,8 @@
 		</div>
 		
 	</div>
-	
 </body>
 </html>
 
 
 
-<%--<%@ page language="java" contentType="text/html; charset=utf-8"
- 	errorPage="loginerror.jsp" 
-    pageEncoding="utf-8"%>
-    
-<!DOCTYPE html>
-<html lang="ko">
-
-<head>
-	<meta charset="utf-8">
-	<title>All My Professors</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">
-	
-</head>
-
-	
-<body>
-
-<%
-  if (request.getMethod() == "POST") {
-	  String email = request.getParameter("email");
-	  String pwd = request.getParameter("passwd");
-	  
-	  if (email == null || pwd == null || email.length() == 0 || pwd.length() == 0) {
-		  %>
-		   <div class="error">ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”.</div>
-		  <%
-	  } else if (email.equals("iu") && pwd.equals("12345")) {
-		  // ë¡œê·¸ì¸ ì„±ê³µ
-	      session.setAttribute("useremail", "iu");
-	      session.setAttribute("userName", "ì´ì§€ì€");	
-//	      response.sendRedirect("ex2.jsp");	      
-		 } else {
-		  %>
-		   <div class="error">ì•„ì´ë””ë‚˜ ë¹„ë°€ë²ˆí˜¸ê°€ ì˜ëª»ë˜ì—ˆìŠµë‹ˆë‹¤.</div>
-		  <%
-	  }
-	  
-  }
-  %>
-	<div id="siteWrap">
-		<div id="header">
-			<jsp:include page="header.jsp" flush="false"/>
-		</div>		
-		<div id="nav">
-			<jsp:include page="navbar.jsp" flush="false"/>
-		</div>
-	
-		<div id="contentsWrap">
-		
-			
-			
-			<!--ë¡œê·¸ì¸ ë°•ìŠ¤-->
-			
-			<form method="post">
-				<div id="login_windows">					
-						<p>E-Mail</p><input type="text" name="email">					
-						<p>Password</p><input type="password" name="passwd">
-						<input type="submit" value="LOG-IN">
-				</div>
-			</form>
-		</div>
-		
-		
-		<div id="footer">			
-				<jsp:include page="footer.jsp" flush="false"/>
-		</div>
-		
-	</div>
-	
-</body>
-</html>
---%>

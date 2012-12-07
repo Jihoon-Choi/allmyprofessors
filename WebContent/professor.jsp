@@ -50,6 +50,7 @@
 						<p>교수님을 등록하시려면 <a href="./add_prof.jsp">Click</a>해 주세요.</p>
 					</div>
 				</div>
+<<<<<<< HEAD
 				
 				
 	<% 
@@ -90,6 +91,35 @@
 					<a href="#">9</a>
 					<a href="#">10</a>
 					<a href="#" class="direction"><span>&rsaquo;</span>다음</a>
+=======
+				<div id="searchContents">
+					<div id="searchData">
+						<table>
+							<tr>
+							<th>교수</th>
+							<th>학교</th>
+							</tr>
+							<tr>
+							<td><%= request.getParameter("keyword") %></td>
+							<td>명지대학교</td>
+							</tr>
+						</table>					
+					</div>
+					<div class="pagination">
+						<a href="#" class="direction"><span>&lsaquo;</span>이전</a>
+						<a href="#">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#">6</a>
+						<a href="#">7</a>
+						<a href="#">8</a>
+						<a href="#">9</a>
+						<a href="#">10</a>
+						<a href="#" class="direction"><span>&rsaquo;</span>다음</a>
+					</div>
+>>>>>>> f93afb0ce8b6749c79c426492329a895205bbc71
 				</div>
 			</div>
 		</div>
