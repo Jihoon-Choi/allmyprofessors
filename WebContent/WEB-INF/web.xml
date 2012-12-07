@@ -8,10 +8,14 @@
 		
 	</servlet>
 	
-	<setvlet-mapping>
+	<servlet-mapping>
 		<servlet-name>search-result</servlet-name>
 		<url-pattern>./search-result</url-pattern>
-	</setvlet-mapping>
-	
+	</servlet-mapping>
+
+<error-page>
+    <error-code>404</error-code>
+    <location>/error</location>
+</error-page>	
 	
 </web-app>

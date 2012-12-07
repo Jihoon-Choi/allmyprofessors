@@ -17,9 +17,7 @@
 								</p>			
 								<p> Copyright(c) All My Professors. All rights reserved.
 								</p>
-<<<<<<< HEAD
 
-=======
 <!--
 				<FORM ACTION=/amp/professor.jsp METHOD=GET>
 				<input type=text name=keyword id="search_box" style="width:300px">	
@@ -32,6 +30,5 @@
 				<input type=submit value="검색" style="width:60px">
 				</FORM>
 -->
->>>>>>> 1237a21ab55d8c5fd74d2a8146526f41bc208901
 </body>
 </html>

@@ -36,6 +36,18 @@
 					</div>
 				</div>
 				<div id="searchContents">
+					<div id="searchData">
+						<table>
+							<tr>
+							<th>교수</th>
+							<th>학교</th>
+							</tr>
+							<tr>
+							<td><%= request.getParameter("keyword") %></td>
+							<td>명지대학교</td>
+							</tr>
+						</table>					
+					</div>
 					<div class="pagination">
 						<a href="#" class="direction"><span>&lsaquo;</span>이전</a>
 						<a href="#">1</a>
