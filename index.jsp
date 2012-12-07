@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" import="java.util.*" import="java.sql.*" %>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8" import="java.util.*" import="java.sql.*" %>
 
 
 <!DOCTYPE html>
@@ -16,10 +16,6 @@
 </head>
 	
 <body>
-	<% 
-		String path1=application.getRealPath("/amp/search-result.jsp");
-		String path2=application.getRealPath("/amp/search-result.jsp");
-		%>
 	
 		<div id="siteWrap">
 			<div id="header">

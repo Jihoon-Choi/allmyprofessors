@@ -5,5 +5,6 @@
     <BODY>
         <H3>데이터베이스 에러</H3>
         에러 메시지: <%= exception.getMessage() %>
+		<%=exception.printStackTrace()%>
     </BODY>
 </HTML>

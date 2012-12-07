@@ -1,6 +1,6 @@
 <%@ page contentType = "text/html;charset=euc-kr" %>
 <%@ page import="java.sql.*" %>
-<%@ page import="com.mysql.jdbc.Driver" %>
+<%--<%@ page import="com.mysql.jdbc.Driver" %>--%>
  
 <% request.setCharacterEncoding("euc-kr"); %>
  
