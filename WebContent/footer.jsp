@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,21 +17,5 @@
 								</p>			
 								<p> Copyright(c) All My Professors. All rights reserved.
 								</p>
-<<<<<<< HEAD
-
-=======
-<!--
-				<FORM ACTION=/amp/professor.jsp METHOD=GET>
-				<input type=text name=keyword id="search_box" style="width:300px">	
-								
-				<select name=sel>
-					<option value="1"> 교수 </option>
-					<option value="2"> 학교 </option>
-				</select>
-										
-				<input type=submit value="검색" style="width:60px">
-				</FORM>
--->
->>>>>>> 53faad6b92cfdf51a2a8bd4ad9e0c069627392d6
 </body>
 </html>

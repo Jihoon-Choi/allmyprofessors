@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*" errorPage="" %>
+<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"  errorPage="DBError.jsp" %>
 <%@ page session="true" %>
 
 <!DOCTYPE html>

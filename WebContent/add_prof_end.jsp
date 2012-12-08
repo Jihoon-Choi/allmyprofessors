@@ -1,4 +1,5 @@
-<%@page contentType="text/html; charset=euc-kr"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"%>
+
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -6,7 +7,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>All My Professors ; ±³¼ö Ãß°¡  °á°ú</title>
+	<title>All My Professors ; êµìˆ˜ ì¶”ê°€  ê²°ê³¼</title>
 	<link href="./css/style.css" rel="stylesheet" type="text/css">	
 	
 </head>
@@ -16,13 +17,11 @@
 	<div id="siteWrap">		
 		<div id="header"><jsp:include page="header.jsp" flush="false"/>	</div>		
 		<div id="nav"><jsp:include page="navbar.jsp" flush="false"/></div>
-	<!--±³¼ö·©Å·-->
 	
-		
 		<div id="contentsWrap">
-			<H3>±³¼ö Ãß°¡  °á°ú</H3>
-				Ãß°¡µÇ¾ú½À´Ï´Ù.
-				<a href="./index.jsp">È¨À¸·Î</a>
+			<H3>êµìˆ˜ ì¶”ê°€  ê²°ê³¼</H3>
+				ì¶”ê°€ë˜ì—ˆìŠµë‹ˆë‹¤.
+				<a href="./index.jsp">í™ˆìœ¼ë¡œ</a>
 				
 		</div>
 		
@@ -31,11 +30,6 @@
 		</div>		
 	
 	</div>
-
-		
-	
-		
-		
 	
 </body>
 

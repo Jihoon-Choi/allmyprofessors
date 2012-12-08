@@ -1,4 +1,4 @@
-<%@page contentType="text/html; charset=euc-kr"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"  errorPage="DBError.jsp" %>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -6,7 +6,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>All My Professors ; х╦©Ь ╟║ют ╟А╟З</title>
+	<title>All My Professors ; М ▄Л⌡░ Й╟─Л·┘ Й╡╟ЙЁ╪</title>
 	<link href="./css/style.css" rel="stylesheet" type="text/css">	
 	
 </head>
@@ -52,19 +52,19 @@
 				
 			</ul>
 		</div>
-	<!--╠Ё╪Ж╥╘е╥-->
+	<!--Й╣░Л┬≤К·╜М┌╧-->
 	
 		
 		<div id="contentsWrap">
-			<H3>х╦©Ь ╟║ют ╟А╟З</H3>
-				╟║ют╣г╬З╫ю╢о╢ы.
-				<a href="./index.jsp">х╗ю╦╥н</a>
+			<H3>М ▄Л⌡░ Й╟─Л·┘ Й╡╟ЙЁ╪</H3>
+				Й╟─Л·┘К░≤Л≈┬Л┼╣К▀┬К▀╓.
+				<a href="./index.jsp">М≥┬Л°╪К║°</a>
 				
 		</div>
 		
 		<div id="footer">			
 			<p> 
-				╩Гюлф╝╪р╟Ё | юл©К╬Ю╟Э | ╟Ёюна╓╨╦цК╠ч╧Фд╖ | ╟М╟╢╪╬ем
+				Л┌╛Л²╢М┼╦Л├▄Й╟° | Л²╢Л ╘Л∙╫Й╢─ | Й╟°Л²╦Л═∙КЁ╢Л╥╗Й╦┴К╟╘Л╧╗ | ЙЁ═Й╟²Л└╪М└╟
 			</p>			
 			<p> Copyright(c) Choi Jihoon. All rights reserved.
 			</p>

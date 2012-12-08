@@ -1,17 +1,17 @@
-<%@page contentType="text/html; charset=euc-kr" errorPage="DBError.jsp" %>
+<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"  errorPage="DBError.jsp" %>
 <%@page import="java.sql.*"%>
 <%
     
-	//º¯°æ ¿ä!! ¾Æ·§ ºÎºÐÀº ½ºÆ®¸µ °´Ã¼ »ý¼º
+	//ë³€ê²½ ìš”!! ì•„ëž« ë¶€ë¶„ì€ ìŠ¤íŠ¸ë§ ê°ì²´ ìƒì„±
 	String email = request.getParameter("email");  
     String password = request.getParameter("passwd");
 	String name = request.getParameter("name");
 	String school = request.getParameter("school");
     String major = request.getParameter("major");	
 	
-	//(¿É¼Ç)º¯°æ ¿ä!! ¼ÂÁß ÇÏ³ª¶óµµ ÀÔ·Â ¾ÈÇÏ¸é ¿¡·¯¶ß°ÔÇÔ. cf)||´Â ORÀÇ ÀÇ¹Ì 
+	//(ì˜µì…˜)ë³€ê²½ ìš”!! ì…‹ì¤‘ í•˜ë‚˜ë¼ë„ ìž…ë ¥ ì•ˆí•˜ë©´ ì—ëŸ¬ëœ¨ê²Œí•¨. cf)||ëŠ” ORì˜ ì˜ë¯¸ 
     if (email == null || password == null || name == null) 
-        throw new Exception("µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÏ½Ê½Ã¿À.");
+        throw new Exception("ë°ì´í„°ë¥¼ ìž…ë ¥í•˜ì‹­ì‹œì˜¤.");
     
 	Connection conn = null;
     Statement stmt = null;
@@ -19,21 +19,21 @@
 	try {
         Class.forName("com.mysql.jdbc.Driver");
 		
-		//º¯°æ ¿ä!! amp´Â database¸í, root:ID, 1234:password -->
+		//ë³€ê²½ ìš”!! ampëŠ” databaseëª…, root:ID, 1234:password -->
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");
         if (conn == null)
-            throw new Exception("µ¥ÀÌÅÍº£ÀÌ½º¿¡ ¿¬°áÇÒ ¼ö ¾ø½À´Ï´Ù.");
+            throw new Exception("ë°ì´í„°ë² ì´ìŠ¤ì— ì—°ê²°í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 			
         stmt = conn.createStatement();
 		
-		//º¯°æ ¿ä!! insert into Å×ÀÌºí¸í DB¿¡ ¿ä¼Òµé values ÀÚ·áÇü -->
+		//ë³€ê²½ ìš”!! insert into í…Œì´ë¸”ëª… DBì— ìš”ì†Œë“¤ values ìžë£Œí˜• -->
         String command = String.format("insert into student " +
                   "(student_email, password, name, major_name, school_name) values ('%s', '%s', '%s', '%s', '%s');",
                   email, password, name, major, school);
         int rowNum = stmt.executeUpdate(command);
 		
         if (rowNum < 1)
-            throw new Exception("µ¥ÀÌÅÍ¸¦ DB¿¡ ÀÔ·ÂÇÒ ¼ö ¾ø½À´Ï´Ù.");
+            throw new Exception("ë°ì´í„°ë¥¼ DBì— ìž…ë ¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
     }
     finally {
         try { 
@@ -48,6 +48,6 @@
         }
     }
 	
-	//º¯°æ ¿ä!! ³¡³ª°í ¾îµð ÆäÀÌÁö·Î °¥°ÇÁö... -->
+	//ë³€ê²½ ìš”!! ëë‚˜ê³  ì–´ë”” íŽ˜ì´ì§€ë¡œ ê°ˆê±´ì§€... -->
     response.sendRedirect("signup_student_after.jsp");
 %>

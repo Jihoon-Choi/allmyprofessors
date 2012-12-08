@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="euc-kr"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +13,20 @@
 <body>
 
 			<div id="header_top">			
-				<input type="button" value="Login" style="width:100px" disabled="disabled">
-				<input type="button" value="Sign-up" style="width:100px" >
+					<%
+					  session = request.getSession(true);
+					  if( session.getAttribute("email") != null && ((String)session.getAttribute("email")).equals("true"))
+					  {
+					   // out.print("로그인 상태입니다. ");
+					   %>
+					   <input type="button" name="input" value="로그아웃" onClick="javascript:window.location.href('logoutConfirm.jsp')"/>
+					   <%
+					  }else{
+					   %>
+					   <%
+					  }
+					 %>
+				<a href="./signup_prof.jsp"></a><input type="button" value="Sign-up" style="width:100px" ></a>
 			</div>
 			
 			<div id="header_left">
@@ -22,9 +34,9 @@
 			</div>					
 				
 			<div id="header_search">
-				<FORM ACTION="./amp/professor.jsp" METHOD="GET">
-				<input type="text">
-				<input type="button" value="Search">
+				<FORM ACTION="./professor.jsp" METHOD="GET">
+					<input type="text">
+					<input type="button" value="Search" name="keyword">
 				</FORM>			
 			</div>
 

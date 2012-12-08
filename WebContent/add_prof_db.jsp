@@ -1,15 +1,15 @@
-<%@page contentType="text/html; charset=utf-8" errorPage="DBError.jsp" %>
+<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8" errorPage="DBError.jsp" %>
 <%@page import="java.sql.*"%>
 <%
     
 	
-	String school = request.getParameter("school");
-	String name = request.getParameter("name");	
-    String major = request.getParameter("major");	
-	String comment = request.getParameter("comment");
+			String school = request.getParameter("school");
+			String name = request.getParameter("name");	
+	    String major = request.getParameter("major");	
+			String comment = request.getParameter("comment");
 	
     if (school == null || name == null) 
-        throw new Exception("µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÏ½Ê½Ã¿À.");
+        throw new Exception("ë°ì´í„°ë¥¼ ìž…ë ¤í•˜ì‹­ì‹œì˜¤");
     
 	Connection conn = null;
     Statement stmt = null;
@@ -19,7 +19,7 @@
 		
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");
         if (conn == null)
-            throw new Exception("µ¥ÀÌÅÍº£ÀÌ½º¿¡ ¿¬°áÇÒ ¼ö ¾ø½À´Ï´Ù.");
+            throw new Exception("ë°ì´í„°ë² ì´ìŠ¤ì— ì—°ê²° ë¶ˆê°€ëŠ¥");
 			
         stmt = conn.createStatement();
         String command = String.format("insert into reputation" +
@@ -28,7 +28,7 @@
         int rowNum = stmt.executeUpdate(command);
 		
         if (rowNum < 1)
-            throw new Exception("µ¥ÀÌÅÍ¸¦ DB¿¡ ÀÔ·ÂÇÒ ¼ö ¾ø½À´Ï´Ù.");
+            throw new Exception("ë°ì´í„°ë¥¼ DBì— ìž…ë ¥í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
     }
     finally {
         try { 

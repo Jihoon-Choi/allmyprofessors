@@ -1,4 +1,4 @@
-<%@page contentType="text/html; charset=utf-8" errorPage="DBError.jsp" %>
+<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8" errorPage="DBError.jsp" %>
 <%@page import="java.sql.*"%>
 <%
     
@@ -9,7 +9,7 @@
 	
 	
     if (school == null) 
-        throw new Exception("µ¥ÀÌÅÍ¸¦ ÀÔ·ÂÇÏ½Ê½Ã¿À.");
+        throw new Exception("ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Ô·ï¿½ï¿½Ï½Ê½Ã¿ï¿½.");
     
 	Connection conn = null;
     Statement stmt = null;
@@ -19,7 +19,7 @@
 		
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");
         if (conn == null)
-            throw new Exception("µ¥ÀÌÅÍº£ÀÌ½º¿¡ ¿¬°áÇÒ ¼ö ¾ø½À´Ï´Ù.");
+            throw new Exception("ï¿½ï¿½ï¿½ï¿½ï¿½Íºï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 			
         stmt = conn.createStatement();
         String command = String.format("insert into school" +
@@ -28,7 +28,7 @@
         int rowNum = stmt.executeUpdate(command);
 		
         if (rowNum < 1)
-            throw new Exception("µ¥ÀÌÅÍ¸¦ DB¿¡ ÀÔ·ÂÇÒ ¼ö ¾ø½À´Ï´Ù.");
+            throw new Exception("ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ DBï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
     }
     finally {
         try { 
