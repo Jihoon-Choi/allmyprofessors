@@ -13,7 +13,19 @@
 <body>
 
 			<div id="header_top">			
-				<input type="button" value="Login" style="width:100px" disabled="disabled">
+<%
+  session = request.getSession(true);
+  if( session.getAttribute("email") != null && ((String)session.getAttribute("email")).equals("true"))
+  {
+   // out.print("로그인 상태입니다. ");
+   %>
+   <input type="button" name="input" value="로그아웃" onClick="javascript:window.location.href('logoutConfirm.jsp')"/>
+   <%
+  }else{
+   %>
+   <%
+  }
+ %>
 				<input type="button" value="Sign-up" style="width:100px" >
 			</div>
 			
