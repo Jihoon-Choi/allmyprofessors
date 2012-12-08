@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="euc-kr" import="java.util.*" import="java.sql.*" %>
+=======
+<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"%>
+<%@ page import="java.util.*" import="java.sql.*" %>
+>>>>>>> 7227e4602cbe75e2b74776a4e1fcc4ddfbd7f9e8
 
 
 <!DOCTYPE html>
