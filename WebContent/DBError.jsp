@@ -1,9 +1,10 @@
-<%@page contentType="text/html; charset=euc-kr" isErrorPage="true" %>
+<%@page contentType="text/html; charset=utf-8" isErrorPage="true" %>
 <% response.setStatus(200); %>
 <HTML>
-    <HEAD><TITLE>╣╔юлем╨ёюл╫╨ ©║╥╞</TITLE></HEAD>
+    <HEAD><TITLE>Л≈░К÷╛ К╟°Й╡╛</TITLE></HEAD>
     <BODY>
-        <H3>╣╔юлем╨ёюл╫╨ ©║╥╞</H3>
-        ©║╥╞ ╦ч╫цаЖ: <%= exception.getMessage() %>
+        <H3>Л≈░К÷╛Й╟─ К╟°Й╡╛К░≤Л≈┬Л┼╣К▀┬К▀╓.</H3>
+    		    Л≈░К÷╛ К╘■Л▀°Л╖─: <%= exception.getMessage() %><br/>
+    		<a href="./index.jsp">М≥┬Л°╪К║°</a>
     </BODY>
 </HTML>
