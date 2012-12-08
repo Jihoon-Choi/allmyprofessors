@@ -34,7 +34,7 @@
   try{
     Class.forName("com.mysql.jdbc.Driver");
     conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp?" +
-      "characterEncoding=utf-8", "root","2477");
+      "characterEncoding=utf-8", "root","1234");
     
     stmt = (Statement) conn.createStatement();
     // 현재 페이지의 글 가져오기

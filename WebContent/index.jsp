@@ -1,10 +1,7 @@
-<<<<<<< HEAD
+
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="euc-kr" import="java.util.*" import="java.sql.*" %>
-=======
-<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"%>
-<%@ page import="java.util.*" import="java.sql.*" %>
->>>>>>> 7227e4602cbe75e2b74776a4e1fcc4ddfbd7f9e8
+
 
 
 <!DOCTYPE html>
@@ -33,11 +30,12 @@
 					<input type=text name="keyword" id="search_box" style="width:300px">	
 						
 					<select name="sel">
-						<option value="1"> 교수 </option>
-						<option value="2"> 학교 </option>
+						<option value="1">Professor </option>
+						<option value="2">School </option>
 					</select>	
 								
-					<input type=submit value="검색" style="width:100px">
+					<input type=submit value="Search" style="width:100px">
+					<a href="./about.jsp"><input type="button" value="SKIP" style="width:100px"></a>
 				</form>					
 			</div>
 			

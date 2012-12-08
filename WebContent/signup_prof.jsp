@@ -55,68 +55,11 @@
 
 	
 	<div id="footer">			
-			<p> 
-				사이트소개 | 이용약관 | 개인정보취급방침 | 고객센터
-			</p>			
-			<p> Copyright(c) Choi Jihoon. All rights reserved.
-			</p>
+			<jsp:include page="footer.jsp" flush="false"/>
 	</div>
 	</div>
 		
-		
-	
-</body>
 
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="ko">
-
-
-<head>
-	<meta charset="utf-8">
-	<title>All My Professors</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">	
-	
-</head>
-
-	
-<body>
-
-	<!--회원가입_교수용-->
-	<div id="siteWrap">
-		<div id="contents">
-			
-			
-		
-		</div>
-	
-	</div>
-
-		
-	<div id="footer">			
-			<p> 
-				사이트소개 | 이용약관 | 개인정보취급방침 | 고객센터
-			</p>			
-			<p> Copyright(c) Choi Jihoon. All rights reserved.
-			</p>
-	</div>
-		
-		
-	
 </body>
 
 </html>
