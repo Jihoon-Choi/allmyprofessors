@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"%>
-
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="euc-kr"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,20 +13,20 @@
 <body>
 
 			<div id="header_top">			
-					<%
-					  session = request.getSession(true);
-					  if( session.getAttribute("email") != null && ((String)session.getAttribute("email")).equals("true"))
-					  {
-					   // out.print("로그인 상태입니다. ");
-					   %>
-					   <input type="button" name="input" value="로그아웃" onClick="javascript:window.location.href('logoutConfirm.jsp')"/>
-					   <%
-					  }else{
-					   %>
-					   <%
-					  }
-					 %>
-				<a href="./signup_prof.jsp"></a><input type="button" value="Sign-up" style="width:100px" ></a>
+<%
+  session = request.getSession(true);
+  if( session.getAttribute("email") != null && ((String)session.getAttribute("email")).equals("true"))
+  {
+
+   %>
+   <input type="button" name="input" value="�α׾ƿ�" onClick="javascript:window.location.href('logoutConfirm.jsp')"/>
+   <%
+  }else{
+   %>
+   <%
+  }
+ %>
+				<input type="button" value="Sign-up" style="width:100px" >
 			</div>
 			
 			<div id="header_left">
@@ -34,9 +34,9 @@
 			</div>					
 				
 			<div id="header_search">
-				<FORM ACTION="./professor.jsp" METHOD="GET">
-					<input type="text">
-					<input type="button" value="Search" name="keyword">
+				<FORM ACTION="./amp/professor.jsp" METHOD="GET">
+				<input type="text">
+				<input type="button" value="Search">
 				</FORM>			
 			</div>
 
