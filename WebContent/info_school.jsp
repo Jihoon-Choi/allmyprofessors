@@ -18,7 +18,7 @@
 		   <H1>It's School Page!!!</H1>
 		   <div id="searchContents">			
 					<div id="searchData">
-						<table>
+						<table border="1">
 							<tr><th>학교</th>
 								<th>홈페이지</th>
 								<th>전화번호</th>
@@ -37,7 +37,7 @@
 								%>											
 								<%				  
 								try{								   
-									conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");        
+									conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","2477");        
 									stmt = conn.createStatement();        
 									rs = stmt.executeQuery("select * from reputation where name like '%"+keyword+"%';");		
 					

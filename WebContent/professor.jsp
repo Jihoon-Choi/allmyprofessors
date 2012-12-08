@@ -43,7 +43,7 @@
 				
 				<div id="searchContents">			
 					<div id="searchData">
-						<table>
+						<table width="550" border="1">
 							<tr>
 								<th>교수</th>
 								<th>학교</th>
@@ -54,7 +54,7 @@
 							<%				  
 							try{
 								   
-								conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");        
+								conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","2477");        
 								stmt = conn.createStatement();        
 								rs = stmt.executeQuery("select * from reputation where name like '%"+keyword+"%' or school like '%"+keyword+"%';");
 					

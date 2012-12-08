@@ -15,13 +15,14 @@
 		
 		
 		<div id="contentsWrap">					
-		   <H1>It's Professso's personal Page!!!</H1>
+		   <H1>It's Professor's personal Page!!!</H1>
 		   <div id="searchContents">			
 					<div id="searchData">
-						<table>
+						<table border="1">
 							<tr><th>교수</th>
-								<th>학교</th>
-								<th>전공</th>
+									<th>E-mail</th>
+									<th>학교</th>
+									<th>전공</th>
 							</tr>	
 							
 							<%
@@ -37,7 +38,7 @@
 				%>											
 							<%				  
 							try{								   
-								conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");        
+								conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","2477");        
 								stmt = conn.createStatement();        
 								rs = stmt.executeQuery("select * from reputation where name like '%"+keyword+"%';");		
 					
@@ -48,7 +49,7 @@
 									<td><a href="./info_school.jsp?school=<%=keyword%>"><%= rs.getString("school") %></a></td>	
 									<td><a href="./info_school.jsp?school=<%=keyword%>"><%= rs.getString("major") %></a></td>								
 									<td><a href="./info_prof.jsp?name=<%=keyword %>"><%= rs.getString("phone") %></a></td>							
-								</tr>	<br/>				
+								</tr>	
 							
 										<%
 											}
@@ -60,7 +61,6 @@
 										%>				
 						</table>					
 					</div>
->>>>>>> f93afb0ce8b6749c79c426492329a895205bbc71
 				</div>
 		</div>
 	</div>

@@ -1,11 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8" import="java.util.*" import="java.sql.*" %>
+	pageEncoding="euc-kr" import="java.util.*" import="java.sql.*" %>
 
 
 <!DOCTYPE html>
 <html lang="ko">
 
-<head>	
+<head>
+	<%request.setCharacterEncoding("utf-8");%>	
 	<meta charset="utf-8">	
 	<title>All My Professors</title>
 	<link href="./css/style.css" rel="stylesheet" type="text/css">	
@@ -22,16 +23,16 @@
 			
 			<div id="contents_main">
 				<img src="./img/logo.png" style="width:300px"><br/>
-					<%request.setCharacterEncoding("utf-8");%>
+				
 				<form ACTION="./index_stu_or_prof.jsp" METHOD="get">					
 					<input type=text name="keyword" id="search_box" style="width:300px">	
 						
 					<select name="sel">
-						<option value="1"> ÍµêÏàò </option>
-						<option value="2"> ÌïôÍµê </option>
+						<option value="1"> ±≥ºˆ </option>
+						<option value="2"> «–±≥ </option>
 					</select>	
 								
-					<input type=submit value="Í≤ÄÏÉâ" style="width:100px">
+					<input type=submit value="∞Àªˆ" style="width:100px">
 				</form>					
 			</div>
 			

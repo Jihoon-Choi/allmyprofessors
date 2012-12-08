@@ -1,10 +1,8 @@
-﻿<%@page contentType="text/html; charset=utf-8"%>
-
-
+﻿<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8" import="java.util.*" import="java.sql.*" %>
 
 <!DOCTYPE html>
 <html lang="ko">
-
 
 <head>
 	<meta charset="utf-8">
@@ -13,7 +11,6 @@
 	
 </head>
 
-	
 <body>
 	<div id="siteWrap">		
 		<div id="header"><jsp:include page="header.jsp" flush="false"/></div>		
@@ -45,7 +42,7 @@
 							<%				  
 							try{
 								   
-								conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");        
+								conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","2477");        
 								stmt = conn.createStatement();        
 								rs = stmt.executeQuery("select * from reputation where name like '%"+keyword+"%' or school like '%"+keyword+"%';");
 					
@@ -53,9 +50,9 @@
 							while(rs.next()){	%>
 								<tr align="center">										
 									<td><a href="./info_school.jsp?keyword=<%keyword%>" target="_blank"><%= rs.getString("school") %></a></td>
-									<td><%= rs.getString("name") %></a></td>
+									<td><%= rs.getString("name") %></td>
 									<td><%= rs.getString("major") %></td>					
-								</tr>	<br/>
+								</tr>
 							
 							
 										<%
@@ -68,8 +65,7 @@
 										%>				
 						</table>					
 					</div>		
-					
->>>>>>> f93afb0ce8b6749c79c426492329a895205bbc71
+					</div>
 				</div>
 			</div>
 		</div>
@@ -77,7 +73,6 @@
 		<div id="footer">			
 			<jsp:include page="footer.jsp" flush="false"/>
 		</div>
-	</div>
 
 </body>
 
