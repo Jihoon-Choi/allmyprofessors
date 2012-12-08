@@ -59,8 +59,8 @@
 					
 							while(rs.next()){	%>
 								<tr align="center">										
-									<td><a href="./"><%= rs.getString("name") %></a></td>
-									<td><a href="./"><%= rs.getString("school") %></a></td>
+									<td><a href="./info_prof.jsp?name=<%=keyword %>"><%= rs.getString("name") %></a></td>
+									<td><a href="./info_school.jsp?school=<%=keyword%>"><%= rs.getString("school") %></a></td>
 									<td><%= rs.getString("major") %></td>					
 								</tr>	<br/>
 							
@@ -74,25 +74,7 @@
 										if(conn != null){try{conn.close();}catch(SQLException e){}}}      
 										%>				
 						</table>					
-					</div>
-					
-					<!--
-					<div class="pagination">
-						<a href="#" class="direction"><span>&lsaquo;</span>이전</a>
-						<a href="#">1</a>
-						<a href="#">2</a>
-						<a href="#">3</a>
-						<a href="#">4</a>
-						<a href="#">5</a>
-						<a href="#">6</a>
-						<a href="#">7</a>
-						<a href="#">8</a>
-						<a href="#">9</a>
-						<a href="#">10</a>
-						<a href="#" class="direction"><span>&rsaquo;</span>다음</a>
-					</div>
-					-->
-					
+					</div>					
 >>>>>>> f93afb0ce8b6749c79c426492329a895205bbc71
 				</div>
 			</div>
