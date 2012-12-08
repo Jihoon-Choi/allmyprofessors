@@ -41,8 +41,6 @@
 				<p>교수님을 등록하시려면 <a href="./add_prof.jsp">Click</a>해 주세요.</p>
 					
 				
-<<<<<<< HEAD
-				
 				<div id="searchContents">			
 					<div id="searchData">
 						<table>
@@ -64,9 +62,9 @@
 							while(rs.next()){	%>
 								<tr align="center">										
 									<td><a href="./info_prof.jsp?keyword=<%=keyword %>" target="_blank"><%= rs.getString("name") %></a></td>
-									<td><%= rs.getString("school") %></a></td>
+									<td><%= rs.getString("school") %></td>
 									<td><%= rs.getString("major") %></td>					
-								</tr>	<br/>
+								</tr>
 							
 							
 										<%
@@ -80,7 +78,6 @@
 						</table>					
 					</div>		
 					
->>>>>>> f93afb0ce8b6749c79c426492329a895205bbc71
 				</div>
 			</div>
 		</div>
@@ -89,8 +86,6 @@
 		<div id="footer">			
 			<jsp:include page="footer.jsp" flush="false" />
 		</div>
-	
-	</div>
 
 </body>
 

@@ -19,7 +19,7 @@
 	
 		<div id="siteWrap">
 			<div id="header">
-				<a href="./login.jsp"><input type="button" value="Login" style="width:100px"></a>
+				<a href="./login2.jsp"><input type="button" value="Login" style="width:100px"></a>
 				<a href="./signup_student.jsp"><input type="button" value="Sign-up" style="width:100px"></a>						
 			</div>
 			
