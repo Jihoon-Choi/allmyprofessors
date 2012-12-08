@@ -23,7 +23,11 @@
 				<%
 				request.setCharacterEncoding("utf-8");		    
 				
-				String keyword = request.getParameter("keyword");
+				
+				
+				String keyword = request.getParameter("keyword");	
+				
+				
 				
 				Class.forName("com.mysql.jdbc.Driver");
 				
@@ -59,8 +63,8 @@
 					
 							while(rs.next()){	%>
 								<tr align="center">										
-									<td><a href="./info_prof.jsp?name=<%=keyword %>"><%= rs.getString("name") %></a></td>
-									<td><a href="./info_school.jsp?school=<%=keyword%>"><%= rs.getString("school") %></a></td>
+									<td><a href="./info_prof.jsp?keyword=<%=keyword %>" target="_blank"><%= rs.getString("name") %></a></td>
+									<td><%= rs.getString("school") %></a></td>
 									<td><%= rs.getString("major") %></td>					
 								</tr>	<br/>
 							
@@ -74,7 +78,8 @@
 										if(conn != null){try{conn.close();}catch(SQLException e){}}}      
 										%>				
 						</table>					
-					</div>					
+					</div>		
+					
 >>>>>>> f93afb0ce8b6749c79c426492329a895205bbc71
 				</div>
 			</div>

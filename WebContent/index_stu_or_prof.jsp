@@ -2,9 +2,14 @@
 <%@page import="java.sql.*"%>
 <%
     
-	request.setCharacterEncoding("euc-kr");
+	request.setCharacterEncoding("utf-8");
+
 	String str = request.getParameter("keyword");  
 	String sel = request.getParameter("sel");
+	
+	if(str.equals("") || str.equals(null)){
+		response.sendRedirect("index.jsp");
+	}
 	
 	
 	if(sel.equals("1")){

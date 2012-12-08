@@ -11,14 +11,11 @@
 	
 	<title>All My Professors</title>
 	<link href="./css/style.css" rel="stylesheet" type="text/css">	
-	<script type="text/JavaScript" src="./jquery-1.8.2.min.js"></script>	
+	<script type="text/JavaScript" src="./jquery-1.8.2.min.js"></script>
+	
 </head>
 	
 <body>
-	<% 
-		String path1=application.getRealPath("/amp/search-result.jsp");
-		String path2=application.getRealPath("/amp/search-result.jsp");
-		%>
 	
 		<div id="siteWrap">
 			<div id="header">
