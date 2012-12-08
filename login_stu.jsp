@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"
+ import="java.util.*"  errorPage="DBError.jsp"%>
+<%@page import="java.sql.*"%>
+
+
+
+<!DOCTYPE html>
 <html lang="ko">
 
 <head>
@@ -11,30 +17,15 @@
 	
 <body>
 	<div id="siteWrap">
-		<div id="header">
-			<div id="header_left">
-				<a href="./index.jsp"><img src="./img/logo.png" width="200px" height="100px"></a>
-			</div>					
-			
-			<div id="header_right">			
-				<input type="button" value="Login" style="width:100px" disabled="disabled">
-				<input type="button" value="Sign-up" style="width:100px" >
-			</div>
-			
-			<div id="header_search">
-				<input type="text">
-				<input type="button" value="Search">			
-			</div>
-			
-		</div>
+		<div id="header"><jsp:include page="header.jsp" flush="false"/>	</div>		
+		<div id="nav">	<jsp:include page="navbar.jsp" flush="false"/>	</div>
 	
 		<div id="contentsWrap">
 		
 			
-			
 			<!--로그인 박스-->
 			
-			<form action="/login.jsp" method="get">
+			<form action="./login_db.jsp" method="get">
 				<div id="login_windows">
 					<!--로그인에서의 id입력-->
 					<div id="enter_id">
@@ -49,15 +40,12 @@
 					<input type="submit" value="LOG-IN"></a>
 				</div>
 			</form>
+			<p><a href="">교수 전용 로그인</a></p>
 		</div>
 		
 		
 		<div id="footer">			
-				<p> 
-					사이트소개 | 이용약관 | 개인정보취급방침 | 고객센터
-				</p>			
-				<p> Copyright(c) Choi Jihoon. All rights reserved.
-				</p>
+			<jsp:include page="footer.jsp" flush="false" />
 		</div>
 		
 	</div>
