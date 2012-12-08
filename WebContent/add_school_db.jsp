@@ -9,7 +9,7 @@
 	
 	
     if (school == null) 
-        throw new Exception("�����͸� �Է��Ͻʽÿ�.");
+        throw new Exception("Data를 입력하십시오.");
     
 	Connection conn = null;
     Statement stmt = null;
@@ -19,7 +19,7 @@
 		
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");
         if (conn == null)
-            throw new Exception("�����ͺ��̽��� ������ �� ����ϴ�.");
+            throw new Exception("Failed Connecting to DB");
 			
         stmt = conn.createStatement();
         String command = String.format("insert into school" +
@@ -28,7 +28,7 @@
         int rowNum = stmt.executeUpdate(command);
 		
         if (rowNum < 1)
-            throw new Exception("�����͸� DB�� �Է��� �� ����ϴ�.");
+            throw new Exception("DATA를 DB에 입력 불가능합니다.");
     }
     finally {
         try { 
