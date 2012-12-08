@@ -35,10 +35,9 @@
 					</select>	
 								
 					<input type=submit value="Search" style="width:100px">
-<<<<<<< HEAD
-					<a href="./about.jsp"><input type="button" value="SKIP" style="width:100px"></a>
-=======
->>>>>>> 03e87e811fa4ca73d6516ae83c696d400fcaed94
+
+					<a href="./about.jsp"><input type="submit" value="SKIP" style="width:100px"></a>
+
 				</form>					
 			</div>
 			

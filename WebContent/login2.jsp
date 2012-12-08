@@ -22,7 +22,7 @@
    
          <form action="loginConfirm.jsp" method="post">
     <ul>
-     <li>아 이 디 : <input name="email" type="text"/></li>
+     <li>E-mail : <input name="email" type="text"/></li>
      <li>비밀번호 : <input name="password" type="password" /></li>
     </ul>
            <input type="submit" name="login" value="로그인"/>
