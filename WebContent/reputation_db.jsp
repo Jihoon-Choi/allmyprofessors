@@ -2,7 +2,7 @@
 <%@page import="java.sql.*"%>
 <%
     
-	//String keyword = request.getParameter("keyword");
+	String keyword = request.getParameter("keykey");
 	int heung = request.getParameter("heung");
 	int nan = request.getParameter("nan");
 	int myung = request.getParameter("myung");

@@ -8,10 +8,10 @@
 <html>
 <head>
 <script>
-function display_alert()
-  {
-  alert("Hello! I am an alert box!!");
-  }
+	function alert()
+	  {
+	  alert("Invalid value!!!");
+	  }
 </script>
 </head>
 <body>
@@ -25,7 +25,7 @@ function display_alert()
 	String sel = request.getParameter("sel");
 	
 	if(str.equals("") || str.equals(null)){%>
-		display_alert();
+		alert();
 		<%
 	}
 	

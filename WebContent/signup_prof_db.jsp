@@ -3,12 +3,12 @@
 <%
     
 	
-	String email = request.getParameter("email");  
+		String email = request.getParameter("email");  
     String passwd = request.getParameter("passwd");
-	String name = request.getParameter("name");
-	String school = request.getParameter("school");
+		String name = request.getParameter("name");
+		String school = request.getParameter("school");
     String major = request.getParameter("major");	
-	String phone = request.getParameter("phone");
+		String phone = request.getParameter("phone");
 	
     if (email == null || passwd == null || name == null) 
         throw new Exception("데이터를 입력하십시오.");
