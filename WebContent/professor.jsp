@@ -56,7 +56,7 @@
 								   
 								conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");        
 								stmt = conn.createStatement();        
-								rs = stmt.executeQuery("select * from reputation where name like '%"+keyword+"%' or school like '%"+keyword+"%';");
+								rs = stmt.executeQuery("select * from reputation where name like '%"+keyword+"%';");
 					
 					
 							while(rs.next()){	%>

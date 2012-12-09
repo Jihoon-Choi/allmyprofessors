@@ -3,9 +3,9 @@
 <%
     
 	String keyword = request.getParameter("keykey");
-	int heung = request.getParameter("heung");
-	int nan = request.getParameter("nan");
-	int myung = request.getParameter("myung");
+	String heung = request.getParameter("heung");
+	String nan = request.getParameter("nan");
+	String myung = request.getParameter("myung");
 	
 	
 		Connection conn = null;
@@ -20,7 +20,7 @@
 			
         
         stmt = conn.createStatement();
-        String command = String.format("insert into reputation(grade_a, grade_b, grade_c) select '%s','%s','%s' where name='kangsun';",heung,nan,myung);
+        String command = String.format("insert into reputation(grade_a, grade_b, grade_c) select '%s','%s','%s' from reputation where name like '%s';",heung,nan,myung,keyword);
         
         int rowNum = stmt.executeUpdate(command);
 		
