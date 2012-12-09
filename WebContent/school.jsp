@@ -83,10 +83,10 @@
               </tr>
 				
 				
-	<% 
-	  
-    try{
-           
+				<% 
+			  
+		    try{
+		           
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");        
         stmt = conn.createStatement();        
         rs = stmt.executeQuery("select * from reputation where name like '%"+keyword+"%' or school like '%"+keyword+"%';");
@@ -95,9 +95,18 @@
         while(rs.next()){	%>
 
 			<tr>		
+
 			<tr align="center">
 			<%-- 
 		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
+
+
+
+			<tr>		
+			<tr align="center">
+			<%-- 
+		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
+
 		        <td><%= rs.getString("name") %></td>
 		        <td><%= rs.getString("email") %></td>				        
 			</tr>
