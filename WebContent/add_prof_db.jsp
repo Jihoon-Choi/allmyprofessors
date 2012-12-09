@@ -7,6 +7,7 @@
 			String name = request.getParameter("name");	
 	    String major = request.getParameter("major");	
 			String comment = request.getParameter("comment");
+			String comment = request.getParameter("year");
 	
     if (school == null || name == null) 
         throw new Exception("데이터를 입려하십시오");

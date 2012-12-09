@@ -6,6 +6,7 @@
 	String school = request.getParameter("school");
 	String homepage = request.getParameter("homepage");
 	String tell = request.getParameter("tell");
+	String tell = request.getParameter("year");
 	
 	
     if (school == null) 
@@ -23,7 +24,7 @@
 			
         stmt = conn.createStatement();
         String command = String.format("insert into school" +
-                  "(name, homepage, tell,year) values ('%s','%s','%s','%s');",
+                  "(name, homepage, tell, year) values ('%s','%s','%s','%s');",
                   school, homepage, tell);
         int rowNum = stmt.executeUpdate(command);
 		

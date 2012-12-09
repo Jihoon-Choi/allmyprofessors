@@ -31,30 +31,10 @@
 					</li>			
 					<li>HomePage<input type="text" name="homepage"></li>
 					<li>Tell<input type="text" name="tell"></li>
-					
-
-		<br/><br/>
-			<table>
-			    <tr>
-					<td>&nbsp&nbspSchool name</td>
-					<td><input type="text" name="school"></td>
-					</tr>
-					<tr>
-					<td>&nbsp&nbspHomePage</td>
-					<td><input type="text" name="homepage"></td>
-					</tr>
-					<tr>
-					<td>&nbsp&nbspTell</td>
-					<td><input type="text" name="tell"></td>
-					</tr>
-					</table>
-					</div>
-					<br/>
-					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		
 
 					<input type="submit" value="추가하기">
-					
+					</ul>
 					
 			</form>
 			</div>
