@@ -33,7 +33,7 @@
 	    ResultSet rs = null;
 	    %>
 		    
-<<<<<<< HEAD
+
 		    <div id="sch_1">
 				<p>안녕하세요, <%= keyword %>으로 검색하셨군요!!!</p>
 				<p><%= keyword %>으로 검색한 결과는, </p><br/>
@@ -93,12 +93,20 @@
         
         
         while(rs.next()){	%>
+<<<<<<< HEAD
 			<tr>		
 
 			<tr align="center">
 			<%-- 
 		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
 
+=======
+
+			<tr>		
+			<tr align="center">
+			<%-- 
+		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
+>>>>>>> 8052876b3945fe0e277f33a624e7bfa32065c438
 		        <td><%= rs.getString("name") %></td>
 		        <td><%= rs.getString("email") %></td>				        
 			</tr>
@@ -112,23 +120,7 @@
 	%>
 			
 			</table>
-=======
-		    
-					<p>검색결과 : <%= keyword  %>	</p>
-								
-								
-				<p>교수님을 등록하시려면 <a href="./add_school.jsp">Click</a>해 주세요.</p>
-					
-				
-				<div id="searchContents">			
-					<div id="searchData">
-						<table width="550" border="1">
-							<tr>
-								<th>학교</th>
-								<th>교수</th>
-								<th>전공</th>
-							</tr>
-							
+
 							
 							<%				  
 							try{
@@ -158,7 +150,6 @@
 					</div>		
 					
 				</div>
->>>>>>> 980df8bb469cf3679292a49f46dc959897c4a996
 			
 		</div>
 	</div>

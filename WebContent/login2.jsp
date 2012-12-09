@@ -26,6 +26,9 @@
      <li>비밀번호 : <input name="password" type="password" /></li>
     </ul>
            <input type="submit" name="login" value="로그인"/>
+           
+           <p>계정이 없으세요? 그렇다면 가입해주세요!</p>
+           	<a href="./signup_student.jsp"><input type="button" value="Sign-up" style="width:100px"></a>
          </form>
          
     			</div>
