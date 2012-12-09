@@ -27,7 +27,7 @@ errorPage="DBError.jsp" %>
 				<img src="./img/logo.png" style="width:300px"><br/>
 				
 				<form ACTION="./index_stu_or_prof.jsp" METHOD="get">					
-					<input type=text name="keyword" placeholder="공백으로 검색 시,전체목록을 볼 수 있습니다." id="search_box" style="width:200px">	
+					<input type=text name="keyword" id="search_box" style="width:200px">	
 						
 					<select name="sel">
 						<option value="1">Professor </option>

@@ -19,7 +19,7 @@
   {
 
    %>
-   <input type="button" name="input" value="·Î±×¾Æ¿ô" onClick="javascript:window.location.href('logoutConfirm.jsp')"/>
+   <input type="button" name="input" value="Log-out" onClick="javascript:window.location.href('logoutConfirm.jsp')"/>
    <%
   }else{
    %>

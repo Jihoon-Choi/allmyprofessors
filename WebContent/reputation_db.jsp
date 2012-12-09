@@ -2,10 +2,11 @@
 <%@page import="java.sql.*"%>
 <%
     
-			String keyword = request.getParameter("keykey");
-			int heung = request.getParameter("heung");
-			int nan = request.getParameter("nan");
-			int myung = request.getParameter("myung");
+			String keyword = request.getParameter("keyword");
+			String heung = request.getParameter("heung");
+			String nan = request.getParameter("nan");
+			String myung = request.getParameter("myung");
+			String comment = request.getParameter("comment");
 	
 	
 		Connection conn = null;
@@ -21,8 +22,7 @@
         String query ="select * from reputation where name='"+keyword+"';";
         stmt = conn.preparedStatement(query);
         
-        String command = String.format("insert into reputation(keyword, grade_a, grade_b, grade_c) 
-        																			select '%s','%s','%s' from reputation where name like '%s';",heung,nan,myung,keyword);
+        String command = String.format("insert into reputation(name,grade_a, grade_b, grade_c)'%s';",keyword,heung,nan,myung,comment);
         
         int rowNum = stmt.executeUpdate(command);
 		
