@@ -44,47 +44,6 @@
 				<div id="searchContents">			
 					<div id="searchData">
 						<table width="700"  height="300">
-							<tr>
-								<th>교수</th>
-								<th>학교</th>
-								<th>전공</th>
-							</tr>
-							<tr>
-							<td>권동섭</td>
-							<td>명지대학교</td>
-							<td>컴퓨터공학과</td>
-							</tr>
-							<tr>
-              <td>김미나</td>
-              <td>용인대학교</td>
-              <td>식품영양학과</td>
-              </tr>
-              <tr>
-              <td>홍길동</td>
-              <td>아주대학교</td>
-              <td>경영학과</td>
-              </tr>
-              <tr>
-              <td>김철수</td>
-              <td>한국외국어대학교</td>
-              <td>영어영문학과</td>
-              </tr>
-              <tr>
-              <td>이지은</td>
-              <td>명지대학교</td>
-              <td>미술사학과</td>
-              </tr>
-              <tr>
-              <td>유홍준</td>
-              <td>명지대학교</td>
-              <td>미술사학과</td>
-              </tr>
-              <tr>
-              <td>박명성</td>
-              <td>명지대학교</td>
-              <td>영화뮤지컬학과</td>
-              </tr>
-							
 							<%				  
 							try{
 								   
@@ -109,6 +68,8 @@
 										if(stmt != null){try{stmt.close();}catch(SQLException e){}}
 										if(conn != null){try{conn.close();}catch(SQLException e){}}}      
 										%>				
+							
+							
 						</table>					
 					</div>		
 					
