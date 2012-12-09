@@ -94,3 +94,62 @@ text-align:center;
 #login_windows{
 clear:both;
 }
+
+#subject_about{
+  font-weight:bold;
+  text-align:center;
+  font-size:20px;
+  margin:10px;
+}
+
+#aligncontent li img{
+  float :left;
+  margin:10px
+}
+#aboutcontent {
+  width : 1000px;
+  display: block;
+  margin : 3px;
+  padding : 20px;
+  text-align: left;
+  line-height:160%
+}
+
+#pro_1{
+	width: 800px;
+	margin:10px;
+	dispaly:block;
+	font-weight:bold;
+}
+
+#searchData table {
+	padding :5px;
+	margin:10px;
+  border: 2px solid #d7e9f9;
+}
+#searchData table th {
+	text-align: center;
+	font-weight:bold;
+	}
+#searchData table td {
+	text-align: center;
+}
+
+#sch_1{
+	width: 800px;
+  margin:10px;
+  dispaly:block;
+  font-weight:bold;
+}
+
+
+#searchData_2 table {
+  border: 2px solid #d7e9f9;
+}
+#searchData_2 table th {
+  text-align:center;
+  font-weight:bold;
+  }
+#searchData_2 table td {
+  text-align: center;
+}
