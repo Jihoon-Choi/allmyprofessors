@@ -1,8 +1,5 @@
-
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="euc-kr" import="java.util.*" import="java.sql.*" %>
-
-
 
 <!DOCTYPE html>
 <html lang="ko">

@@ -46,7 +46,8 @@
 									<td><%= rs.getString("email") %></td>	
 									<td><%= rs.getString("school") %></td>	
 									<td><%= rs.getString("major") %></td>								
-									<td><%= rs.getString("phone") %></td>							
+									<td><%= rs.getString("phone") %></td>	
+									<td><%= rs.getString("comment") %></td>						
 								</tr>	
 							
 										<%
@@ -57,34 +58,41 @@
 										if(stmt != null){try{stmt.close();}catch(SQLException e){}}
 										if(conn != null){try{conn.close();}catch(SQLException e){}}}      
 										%>				
-						</table>					
+						</table>	
+						
+										
 					</div>
 				</div>
 				
 				
 				<H1>교수 평가하기</H1>
-		<form action="./reputation_db.jsp>" method="get">
+		<form action="./reputation_db.jsp>" method="post">
+			<div name="keykey" value="<%= keyword%>"></div>
 			<div id="reputation">
-				<P>흥미도</P>
-				<input type="radio" name="heung" value="5"/>5점
-				<input type="radio" name="heung" value="4"/>4점
-				<input type="radio" name="heung" value="3"/>3점
-				<input type="radio" name="heung" value="2"/>3점
-				<input type="radio" name="heung" value="1"/>1점
-				
-				<P>난이도</P>
-				<input type="radio" name="nan" value="5"/>5점
-				<input type="radio" name="nan" value="4"/>4점
-		  	<input type="radio" name="nan" value="3"/>3점
-				<input type="radio" name="nan" value="2"/>2점
-				<input type="radio" name="nan" value="1"/>1점
-				
-				<P>명쾌함</P>
-				<input type="radio" name="myung" value="5"/>5점
-				<input type="radio" name="myung" value="4"/>4점
-		  	<input type="radio" name="myung" value="3"/>3점
-				<input type="radio" name="myung" value="2"/>2점
-				<input type="radio" name="myung" value="1"/>1점
+				<P>흥미도
+					<input type="radio" name="heung" value="5"/>5점
+					<input type="radio" name="heung" value="4"/>4점
+					<input type="radio" name="heung" value="3"/>3점
+					<input type="radio" name="heung" value="2"/>3점
+					<input type="radio" name="heung" value="1"/>1점
+				</P>
+				<P>난이도
+					<input type="radio" name="nan" value="5"/>5점
+					<input type="radio" name="nan" value="4"/>4점
+			  	<input type="radio" name="nan" value="3"/>3점
+					<input type="radio" name="nan" value="2"/>2점
+					<input type="radio" name="nan" value="1"/>1점
+				</P>
+				<P>명쾌함
+					<input type="radio" name="myung" value="5"/>5점
+					<input type="radio" name="myung" value="4"/>4점
+			  	<input type="radio" name="myung" value="3"/>3점
+					<input type="radio" name="myung" value="2"/>2점
+					<input type="radio" name="myung" value="1"/>1점
+				</P>
+				<p>
+					<textarea name="comment" rows="4" cols="50">				</textarea>
+				<p>
 			</div>	
 			<input type="submit" value="평가하기" style="width:100px">
 		</form>		
