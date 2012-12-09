@@ -26,7 +26,7 @@
    <%
   }
  %>
-				<input type="button" value="Sign-up" style="width:100px" >
+				<a href="./signup_student.jsp"><input type="button" value="Sign-up" style="width:100px"></a>
 			</div>
 			
 			<div id="header_left">
@@ -34,9 +34,15 @@
 			</div>					
 				
 			<div id="header_search">
-				<FORM ACTION="./amp/professor.jsp" METHOD="GET">
-				<input type="text">
-				<input type="button" value="Search">
+		<form ACTION="./index_stu_or_prof.jsp" METHOD="get">					
+					<input type=text name="keyword" id="search_box">	
+						
+					<select name="sel">
+						<option value="1">Professor </option>
+						<option value="2">School </option>
+					</select>	
+								
+					<input type=submit value="Search">
 				</FORM>			
 			</div>
 

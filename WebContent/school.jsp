@@ -54,6 +54,7 @@
 			        rs = stmt.executeQuery("select * from reputation where name like '%"+keyword+"%' or school like '%"+keyword+"%';");
         
         
+
 			        while(rs.next()){	%>
 							<tr align="center">	
 					        <td><%= rs.getString("name") %></td>
@@ -67,7 +68,26 @@
 			    if(stmt != null){try{stmt.close();}catch(SQLException e){}}
 			    if(conn != null){try{conn.close();}catch(SQLException e){}}}      
 				%>
-			
+
+        while(rs.next()){	%>
+
+			<tr>		
+
+			<tr align="center">
+			<%-- 
+		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
+
+		        <td><%= rs.getString("name") %></td>
+		        <td><%= rs.getString("email") %></td>				        
+			</tr>
+	<%
+		}
+    }catch(SQLException e){
+    }finally{
+    if(rs != null){try{rs.close();}catch(SQLException e){}}
+    if(stmt != null){try{stmt.close();}catch(SQLException e){}}
+    if(conn != null){try{conn.close();}catch(SQLException e){}}}      
+	%>
 			
 		</div>
 	</div>
