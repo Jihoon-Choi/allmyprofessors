@@ -33,16 +33,53 @@
 	    ResultSet rs = null;
 	    %>
 		    
-		    
+		    <div id="sch_1">
 				<p>안녕하세요, <%= keyword %>으로 검색하셨군요!!!</p>
-				<p><%= keyword %>으로 검색한 결과는, </p>
+				<p><%= keyword %>으로 검색한 결과는, </p><br/>
 				<div id="searchMap">
 					<div id="proSearch">
 						<input type="text">
-						<input type="button" value="search">
+						<input type="button" value="search"><br/><br/>
 						<p>학교를 등록하시려면 <a href="./add_school.jsp">Click</a>해 주세요.</p>
 					</div>
 				</div>
+				</div>
+				
+				<br/><br/>   
+          <div id="searchData_2">
+            <table width="700"  height="300">
+              <tr>
+                <th>학교</th>
+                <th>지역</th>
+              </tr>
+              <tr>
+              <td>명지대학교</td>
+              <td>용인</td>
+              </tr>
+              <tr>           
+              <td>용인대학교</td>
+              <td>용인</td>
+              </tr>
+              <tr>            
+              <td>아주대학교</td>
+              <td>수원</td>
+              </tr>
+              <tr>            
+              <td>한국외국어대학교</td>
+              <td>서울</td>
+              </tr>
+              <tr>       
+              <td>명지대학교</td>
+              <td>서울</td>
+              </tr>
+              <tr>            
+              <td>한양대학교</td>
+              <td>안산</td>
+              </tr>
+              <tr>             
+              <td>경희대학교</td>
+              <td>수원</td>
+              </tr>
 				
 				
 	<% 
@@ -74,10 +111,11 @@
     if(conn != null){try{conn.close();}catch(SQLException e){}}}      
 	%>
 			
+			</table>
 			
 		</div>
 	</div>
-		
+	<br/><br/><br/><br/><br/><br/><br/>	
 	<div id="footer">			
 		<jsp:include page="footer.jsp" flush="false" />
 	</div>
