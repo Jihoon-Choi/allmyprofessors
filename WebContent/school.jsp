@@ -55,16 +55,17 @@
         
         
         while(rs.next()){	%>
-<<<<<<< HEAD
+		<table>
 			<tr>		
-=======
+
 			<tr align="center">
 			<%-- 
 		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
->>>>>>> 03e87e811fa4ca73d6516ae83c696d400fcaed94
+
 		        <td><%= rs.getString("name") %></td>
 		        <td><%= rs.getString("email") %></td>				        
 			</tr>
+		</table>
 	<%
 		}
     }catch(SQLException e){
