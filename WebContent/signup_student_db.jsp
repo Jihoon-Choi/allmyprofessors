@@ -28,7 +28,7 @@
 		
 		//변경 요!! insert into 테이블명 DB에 요소들 values 자료형 -->
         String command = String.format("insert into student " +
-                  "(student_email, password, name, major_name, school_name) values ('%s', '%s', '%s', '%s', '%s');",
+                  "(student_email, password, name, major_name, school_name,year) values ('%s', '%s', '%s', '%s', '%s','%s');",
                   email, password, name, major, school);
         int rowNum = stmt.executeUpdate(command);
 		

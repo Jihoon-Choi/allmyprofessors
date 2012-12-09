@@ -23,7 +23,7 @@
 			
         stmt = conn.createStatement();
         String command = String.format("insert into school" +
-                  "(name, homepage, tell) values ('%s','%s','%s');",
+                  "(name, homepage, tell,year) values ('%s','%s','%s','%s');",
                   school, homepage, tell);
         int rowNum = stmt.executeUpdate(command);
 		

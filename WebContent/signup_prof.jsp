@@ -31,8 +31,10 @@
 					<li>School<input type="text" name="school"></li>
 					<li>Major<input type="text" name="major"></li>
 					<li>Phone<input type="text" name="phone"></li>
-					
-					 <input type="checkbox">동의합니다			
+					<li> University / College
+						<input type="radio" name="year" value="4"/>4년제
+						<input type="radio" name="year" value="2"/>2년제
+					</li>
 				</ul>					
 				<input type="submit" value="가입완료">
 			</form>

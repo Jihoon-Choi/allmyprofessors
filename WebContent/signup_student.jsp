@@ -63,7 +63,10 @@
 						  <label class="control-label" for="input01">School</label>
 						  <div class="controls">
 							<input type="text" placeholder="ex)명지대학교,송담대학" class="input-xlarge" name="school">
-							
+							<li>
+									<input type="radio" name="year" value="4"/>4년제
+									<input type="radio" name="year" value="2"/>2년제
+							</li>			
 						  </div>
 						</div>
 
@@ -77,23 +80,7 @@
 						  </div>
 						</div>
 
-					<div class="control-group">
-
-						  <!-- Prepended checkbox -->
-						  <label class="control-label">Accept</label>
-						  <div class="controls">
-							<div class="input-prepend">
-							  <span class="add-on">
-								<label class="checkbox">
-								  <input type="checkbox" class="">
-								</label>
-							  </span>
-							  <input class="span2" placeholder="동의합니다" type="text">
-							</div>
-							<p class="help-block">Supporting help text</p>
-						  </div>
-
-						</div><div class="control-group">
+				 <div class="control-group">
 						  <label class="control-label">Submit</label>
 
 						  <!-- Button -->

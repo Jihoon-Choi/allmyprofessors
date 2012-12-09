@@ -23,6 +23,10 @@
 			<form action="./add_school_db.jsp" method="post">
 				<ul>
 					<li>School name<input type="text" name="school"></li>
+					<li>University / College
+						<input type="radio" name="year" value="4"/>4년제
+						<input type="radio" name="year" value="2"/>2년제
+					</li>			
 					<li>HomePage<input type="text" name="homepage"></li>
 					<li>Tell<input type="text" name="tell"></li>
 					

@@ -23,7 +23,11 @@
 			<form action="./add_prof_db.jsp" method="post">
 				<ul>
 					<li>School<input type="text" name="school"></li>
-					<li>Name<input type="text" name="name"></li>						
+					<li>Name<input type="text" name="name"></li>
+					<li>University / College
+						<input type="radio" name="year" value="4"/>4년제
+						<input type="radio" name="year" value="2"/>2년제
+					</li>						
 					<li>Major<input type="text" name="major"></li>
 					<li>Comment<input type="text" name="comment"></li>
 					<input type="submit" value="추가하기">
