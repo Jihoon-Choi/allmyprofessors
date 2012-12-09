@@ -7,7 +7,7 @@
 			String name = request.getParameter("name");	
 	    String major = request.getParameter("major");	
 			String comment = request.getParameter("comment");
-			String comment = request.getParameter("year");
+			String year = request.getParameter("year");
 	
     if (school == null || name == null) 
         throw new Exception("데이터를 입려하십시오");
@@ -23,11 +23,18 @@
         if (conn == null)
             throw new Exception("데이터베이스에 연결 불가능");
 
+        
+        
+        
 			
         stmt = conn.createStatement();
+  
+        
+        
+        
         String command = String.format("insert into reputation" +
                   "(school, name, major,comment, year) values ('%s','%s','%s','%s','%s');",
-                  school, name, major, comment);
+                  school, name, major, comment,year);
         int rowNum = stmt.executeUpdate(command);
 		
         if (rowNum < 1)

@@ -34,7 +34,7 @@
 		
 
 					<input type="submit" value="추가하기">
-					</ul>
+				</ul>
 					
 			</form>
 			</div>
