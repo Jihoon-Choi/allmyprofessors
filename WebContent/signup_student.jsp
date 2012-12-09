@@ -1,5 +1,6 @@
-ï»¿<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"  errorPage="DBError.jsp" %>
-
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="euc-kr" import="java.util.*" import="java.sql.*"
+errorPage="DBError.jsp" %>
 
 
 <!DOCTYPE html>
@@ -8,8 +9,11 @@
 		<meta charset="utf-8">
 		<title>All My Professors</title>
 		<link href="./css/style.css" rel="stylesheet" type="text/css">	
-		  <script src="http://code.jquery.com/jquery-latest.js"></script>
-			<script src="js/bootstrap.min.js"></script>		
+		<link href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"
+					rel="stylesheet" >
+ 		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
 	</head>	
 	
 	<body>
@@ -18,10 +22,31 @@
 			<div id="nav"><jsp:include page="navbar.jsp" flush="false"/></div>
 			
 			<div id="contentsWrap">
-				<p> êµìˆ˜ìš© íšŒì›ê°€ì… ë°”ë¡œê°€ê¸°  <a href="./signup_prof.jsp">CLICK</a></p>
+				<p> ±³¼ö¿ë È¸¿ø°¡ÀÔ ¹Ù·Î°¡±â  <a href="./signup_prof.jsp">CLICK</a></p>
 								
 												
 								 
+<<<<<<< HEAD
+	<form class="form-horizontal" action="./signup_student_db.jsp" method="post">
+				  
+				<ul>
+					<li>Email<input type="text" placeholder="ex)admin@mju.ac.kr" 
+										class="input-xlarge" name="email"></li>
+					<li>Password<input type="text" placeholder="ÃÖ¼Ò 6ÀÚ" 
+											class="input-xlarge" name="passwd"></li>
+					<li>name<input type="text" placeholder="ÇÑ±ÛÀÔ·Â" 
+									class="input-xlarge" name="name"></li>
+					<li>School<input type="text" placeholder="ex)¸íÁö´ëÇĞ±³,¼Û´ã´ëÇĞ" 
+											class="input-xlarge" name="school"></li>
+					<li>Major<input type="text" placeholder="ex)ÄÄÇ»ÅÍ°øÇĞ°ú" 
+										class="input-xlarge" name="major"></li>
+					
+					 <li><input type="checkbox">µ¿ÀÇÇÕ´Ï´Ù</li>			
+				</ul>					
+				<input type="submit" value="°¡ÀÔ¿Ï·á">
+	</form>
+		
+=======
 				  <form class="form-horizontal" action="./signup_student_db.jsp" method="post">
 					<fieldset>
 					  <div id="legend" class="">
@@ -94,6 +119,7 @@
 
 
 			
+>>>>>>> a73d8a29ce36e0319906b0490c7084fe7e1b5240
 			</div>
 			
 			<div id="footer"><jsp:include page="footer.jsp" flush="false"/>	</div>

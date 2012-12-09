@@ -10,7 +10,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>All My Professors</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">		
+	<link href="./css/style.css" rel="stylesheet" type="text/css">	
+		<link href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"
+					rel="stylesheet" >
+ 		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
 </head>
 	
 <body>
@@ -52,7 +56,7 @@
 				
 				<br/><br/>   
           <div id="searchData_2">
-            <table width="700"  height="300">
+            <table>
               <tr>
                 <th>학교</th>
                 <th>지역</th>
@@ -97,6 +101,8 @@
         
         
         while(rs.next()){	%>
+<<<<<<< HEAD
+=======
 
 			<tr>		
 
@@ -105,12 +111,12 @@
 		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
 
 
+>>>>>>> a73d8a29ce36e0319906b0490c7084fe7e1b5240
 
 			<tr>		
 			<tr align="center">
 			<%-- 
 		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
-
 		        <td><%= rs.getString("name") %></td>
 		        <td><%= rs.getString("email") %></td>				        
 			</tr>
@@ -122,6 +128,11 @@
     if(stmt != null){try{stmt.close();}catch(SQLException e){}}
     if(conn != null){try{conn.close();}catch(SQLException e){}}}      
 	%>
+<<<<<<< HEAD
+			
+			</table>
+			
+=======
 			
 			</table>
 
@@ -155,13 +166,14 @@
 					
 				</div>
 			
+>>>>>>> a73d8a29ce36e0319906b0490c7084fe7e1b5240
 		</div>
+	</div>
 	</div>
 	<br/><br/><br/><br/><br/><br/><br/>	
 	<div id="footer">			
 		<jsp:include page="footer.jsp" flush="false" />
 	</div>
-
 	</div>
 
 </body>
