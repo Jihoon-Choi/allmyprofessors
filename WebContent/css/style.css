@@ -164,3 +164,13 @@ clear:both;
   font-weight:bold;
 }
 
+#contentsWrap_a_p table {
+   border: 2px solid #d7e9f9;
+   width: 300px;
+   height:200px;
+}
+
+#contentsWrap_a_p table tr td {
+  text-align: left;
+  font-weight:bold;
+}

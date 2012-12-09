@@ -19,18 +19,35 @@
 		<div id="header"><jsp:include page="header.jsp" flush="false"/>	</div>
 		<div id="nav"><jsp:include page="navbar.jsp" flush="false"/></div>
 	
-		<div id="contentsWrap">
+		<div id="contentsWrap_a_p">
 			<form action="./add_prof_db.jsp" method="post">
-				<ul>
-					<li>School<input type="text" name="school"></li>
-					<li>Name<input type="text" name="name"></li>						
-					<li>Major<input type="text" name="major"></li>
-					<li>Comment<input type="text" name="comment"></li>
+			<br/><br/>
+      <table>
+				  <tr>
+					<td>&nbsp&nbspSchool</td>
+					<td><input type="text" name="school"></td>
+					</tr>
+					<tr>
+					<td>&nbsp&nbspName</td>
+					<td><input type="text" name="name"></td>	
+					</tr>
+					<tr>					
+					<td>&nbsp&nbspMajor</td>
+					<td><input type="text" name="major"></td>
+					</tr>
+					<tr>
+					<td>&nbsp&nbspComment</td>
+					<td><input type="text" name="comment"></td>
+					</tr>
+					</table>
+					<br/>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 					<input type="submit" value="추가하기">
-				</ul>		
 			</form>
+			
 		</div>
-		
+		<br/><br/><br/><br/><br/><br/><br/><br/>
 		<div id="footer"><jsp:include page="footer.jsp" flush="false"/>	</div>
 	</div>
 </body>
