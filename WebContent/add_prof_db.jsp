@@ -25,7 +25,7 @@
 			
         stmt = conn.createStatement();
         String command = String.format("insert into reputation" +
-                  "(school, name, major,comment) values ('%s','%s','%s','%s');",
+                  "(school, name, major,comment, year) values ('%s','%s','%s','%s','%s');",
                   school, name, major, comment);
         int rowNum = stmt.executeUpdate(command);
 		

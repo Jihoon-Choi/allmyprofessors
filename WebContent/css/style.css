@@ -121,27 +121,27 @@ clear:both;
 }
 
 #pro_1{
-	width: 800px;
-	margin:10px;
-	dispaly:block;
-	font-weight:bold;
+  width: 800px;
+  margin:10px;
+  dispaly:block;
+  font-weight:bold;
 }
 
 #searchData table {
-	padding :5px;
-	margin:10px;
+  padding :5px;
+  margin:10px;
   border: 2px solid #d7e9f9;
 }
 #searchData table th {
-	text-align: center;
-	font-weight:bold;
-	}
+  text-align: center;
+  font-weight:bold;
+  }
 #searchData table td {
-	text-align: center;
+  text-align: center;
 }
 
 #sch_1{
-	width: 800px;
+  width: 800px;
   margin:10px;
   dispaly:block;
   font-weight:bold;
@@ -158,3 +158,27 @@ clear:both;
 #searchData_2 table td {
   text-align: center;
 }
+<<<<<<< HEAD
+=======
+
+#contentsWrap_addsch  table{
+   border: 2px solid #d7e9f9;
+   width: 300px;
+   height:200px;
+}
+#contentsWrap_addsch  table tr td {
+  text-align: left;
+  font-weight:bold;
+}
+
+#contentsWrap_a_p table {
+   border: 2px solid #d7e9f9;
+   width: 300px;
+   height:200px;
+}
+
+#contentsWrap_a_p table tr td {
+  text-align: left;
+  font-weight:bold;
+}
+>>>>>>> a73d8a29ce36e0319906b0490c7084fe7e1b5240

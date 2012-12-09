@@ -18,8 +18,9 @@
         if (conn == null)
             throw new Exception("Failed Connecting to DB");
 			
-        String query ="";
+        String query ="select * from reputation where name='"+keyword+"';";
         stmt = conn.preparedStatement(query);
+        
         String command = String.format("insert into reputation(keyword, grade_a, grade_b, grade_c) 
         																			select '%s','%s','%s' from reputation where name like '%s';",heung,nan,myung,keyword);
         
