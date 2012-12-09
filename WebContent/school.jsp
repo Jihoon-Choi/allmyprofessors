@@ -93,20 +93,20 @@
         
         
         while(rs.next()){	%>
-<<<<<<< HEAD
+
 			<tr>		
 
 			<tr align="center">
 			<%-- 
 		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
 
-=======
+
 
 			<tr>		
 			<tr align="center">
 			<%-- 
 		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
->>>>>>> 8052876b3945fe0e277f33a624e7bfa32065c438
+
 		        <td><%= rs.getString("name") %></td>
 		        <td><%= rs.getString("email") %></td>				        
 			</tr>

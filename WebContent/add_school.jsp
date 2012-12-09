@@ -22,7 +22,7 @@
 		<div id="contentsWrap">
 		<div id="contentsWrap_addsch">
 			<form action="./add_school_db.jsp" method="post">
-<<<<<<< HEAD
+
 				<ul>
 					<li>School name<input type="text" name="school"></li>
 					<li>University / College
@@ -32,7 +32,7 @@
 					<li>HomePage<input type="text" name="homepage"></li>
 					<li>Tell<input type="text" name="tell"></li>
 					
-=======
+
 		<br/><br/>
 			<table>
 			    <tr>
@@ -52,7 +52,7 @@
 					<br/>
 					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
->>>>>>> 8052876b3945fe0e277f33a624e7bfa32065c438
+
 					<input type="submit" value="추가하기">
 					
 					
