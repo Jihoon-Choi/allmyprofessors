@@ -16,7 +16,7 @@
      <div id="nav">
 			<ul>
 				<li id="navhome">
-					<a href="#">HOME</a>
+					<a href="./index.jsp">HOME</a>
 					</li>
 				<li id="nav_about">
 					<a href="./about.jsp">About</a>

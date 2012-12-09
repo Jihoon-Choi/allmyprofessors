@@ -69,12 +69,10 @@
 			    if(conn != null){try{conn.close();}catch(SQLException e){}}}      
 				%>
 
-        while(rs.next()){	%>
-<<<<<<< HEAD
-		<table>
-=======
+       <% while(rs.next()){	%>
 
->>>>>>> 49e4d3e6afc7cb888ca3789b4a63bb75cee62645
+		<table>
+
 			<tr>		
 
 			<tr align="center">
