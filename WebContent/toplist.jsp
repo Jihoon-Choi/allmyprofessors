@@ -14,16 +14,12 @@
 	
 <body>
 	<div id="siteWrap">		
-		<div id="header">
-			<jsp:include page="header.jsp" flush="false"/>
-		</div>
+		<div id="header">	<jsp:include page="header.jsp" flush="false"/>	</div>
 		
-		<div id="nav">
-			<jsp:include page="navbar.jsp" flush="false"/>
-		</div>
+		<div id="nav">	<jsp:include page="navbar.jsp" flush="false"/></div>
 		
 		
-	<!--교수랭킹-->		
+
 		<div id="contentsWrap">
 			<h1>it's top list!!!!!!!!!!!</h1>
 			<ul>
@@ -31,17 +27,11 @@
 			</ul>
 			
 		
-		</div>
-		
-		<div id="footer">			
-			<jsp:include page="footer.jsp" flush="false" />
-		</div>
+		</div>		
+		<div id="footer">	<jsp:include page="footer.jsp" flush="false" /></div>
 	
 	</div>
 
-		
-	
-		
 		
 	
 </body>
