@@ -36,7 +36,7 @@
 								
 					<input type=submit value="Search" style="width:100px">
 
-					<a href="./about.jsp"><input type="submit" value="SKIP" style="width:100px"></a>
+					<a href="./about.jsp"><input type="button" value="SKIP" style="width:100px"></a>
 
 				</form>					
 			</div>

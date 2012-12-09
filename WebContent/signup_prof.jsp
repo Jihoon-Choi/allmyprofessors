@@ -10,6 +10,7 @@
 	<title>All My Professors</title>
 	<link href="./css/style.css" rel="stylesheet" type="text/css">	
 	<script type="text/JavaScript" src="./jquery-1.8.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	
 </head>
 
