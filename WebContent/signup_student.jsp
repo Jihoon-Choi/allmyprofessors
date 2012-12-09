@@ -1,5 +1,6 @@
-Ôªø<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"  errorPage="DBError.jsp" %>
-
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="euc-kr" import="java.util.*" import="java.sql.*"
+errorPage="DBError.jsp" %>
 
 
 <!DOCTYPE html>
@@ -8,8 +9,11 @@
 		<meta charset="utf-8">
 		<title>All My Professors</title>
 		<link href="./css/style.css" rel="stylesheet" type="text/css">	
-		  <script src="http://code.jquery.com/jquery-latest.js"></script>
-			<script src="js/bootstrap.min.js"></script>		
+		<link href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"
+					rel="stylesheet" >
+ 		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
 	</head>	
 	
 	<body>
@@ -18,95 +22,29 @@
 			<div id="nav"><jsp:include page="navbar.jsp" flush="false"/></div>
 			
 			<div id="contentsWrap">
-				<p> ÍµêÏàòÏö© ÌöåÏõêÍ∞ÄÏûÖ Î∞îÎ°úÍ∞ÄÍ∏∞  <a href="./signup_prof.jsp">CLICK</a></p>
+				<p> ±≥ºˆøÎ »∏ø¯∞°¿‘ πŸ∑Œ∞°±‚  <a href="./signup_prof.jsp">CLICK</a></p>
 								
 												
 								 
-				  <form class="form-horizontal" action="./signup_student_db.jsp" method="post">
-					<fieldset>
-					  <div id="legend" class="">
-						<legend class="">Sign Up</legend>
-					  </div>
-					<div class="control-group">
-
-						  <!-- Text input-->
-						  <label class="control-label" for="input01">E-mail</label>
-						  <div class="controls">
-							<input type="text" placeholder="ex)admin@mju.ac.kr" class="input-xlarge" name="email">
-				
-						  </div>
-						</div>
-
-					<div class="control-group">
-
-						  <!-- Text input-->
-						  <label class="control-label" for="input01">Password</label>
-						  <div class="controls">
-							<input type="text" placeholder="ÏµúÏÜå 6Ïûê" class="input-xlarge" name="passwd">
-						
-						  </div>
-						</div>
-
-					<div class="control-group">
-
-						  <!-- Text input-->
-						  <label class="control-label" for="input01">Name</label>
-						  <div class="controls">
-							<input type="text" placeholder="ÌïúÍ∏ÄÏûÖÎ†•" class="input-xlarge" name="name">
-						
-						  </div>
-						</div>
-
-					<div class="control-group">
-
-						  <!-- Text input-->
-						  <label class="control-label" for="input01">School</label>
-						  <div class="controls">
-							<input type="text" placeholder="ex)Î™ÖÏßÄÎåÄÌïôÍµê,ÏÜ°Îã¥ÎåÄÌïô" class="input-xlarge" name="school">
-							
-						  </div>
-						</div>
-
-					<div class="control-group">
-
-						  <!-- Text input-->
-						  <label class="control-label" for="input01">Major</label>
-						  <div class="controls">
-							<input type="text" placeholder="ex)Ïª¥Ìì®ÌÑ∞Í≥µÌïôÍ≥º" class="input-xlarge" name="major">
-						
-						  </div>
-						</div>
-
-					<div class="control-group">
-
-						  <!-- Prepended checkbox -->
-						  <label class="control-label">Accept</label>
-						  <div class="controls">
-							<div class="input-prepend">
-							  <span class="add-on">
-								<label class="checkbox">
-								  <input type="checkbox" class="">
-								</label>
-							  </span>
-							  <input class="span2" placeholder="ÎèôÏùòÌï©ÎãàÎã§" type="text">
-							</div>
-							<p class="help-block">Supporting help text</p>
-						  </div>
-
-						</div><div class="control-group">
-						  <label class="control-label">Submit</label>
-
-						  <!-- Button -->
-						  <div class="controls">
-							<button class="btn btn-success">Sign-Up</button>
-						  </div>
-						</div>
-
-					</fieldset>
-				  </form>
-
-
-			
+	<form class="form-horizontal" action="./signup_student_db.jsp" method="post">
+				  
+				<ul>
+					<li>Email<input type="text" placeholder="ex)admin@mju.ac.kr" 
+										class="input-xlarge" name="email"></li>
+					<li>Password<input type="text" placeholder="√÷º“ 6¿⁄" 
+											class="input-xlarge" name="passwd"></li>
+					<li>name<input type="text" placeholder="«—±€¿‘∑¬" 
+									class="input-xlarge" name="name"></li>
+					<li>School<input type="text" placeholder="ex)∏Ì¡ˆ¥Î«–±≥,º€¥„¥Î«–" 
+											class="input-xlarge" name="school"></li>
+					<li>Major<input type="text" placeholder="ex)ƒƒ«ª≈Õ∞¯«–∞˙" 
+										class="input-xlarge" name="major"></li>
+					
+					 <li><input type="checkbox">µø¿««’¥œ¥Ÿ</li>			
+				</ul>					
+				<input type="submit" value="∞°¿‘øœ∑·">
+	</form>
+		
 			</div>
 			
 			<div id="footer"><jsp:include page="footer.jsp" flush="false"/>	</div>
