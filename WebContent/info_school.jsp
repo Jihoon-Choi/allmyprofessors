@@ -37,7 +37,7 @@
 								%>											
 								<%				  
 								try{								   
-									conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","2477");        
+									conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");        
 									stmt = conn.createStatement();        
 									rs = stmt.executeQuery("select * from reputation where name like '%"+keyword+"%';");		
 					

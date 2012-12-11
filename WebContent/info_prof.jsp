@@ -67,7 +67,7 @@
 				
 				<H1>교수 평가하기</H1>
 		<form action="./reputation_db.jsp>" method="post">
-			<input name="keyword" type="hidden" value="<%= keyword%>"></div>
+			<input type="hidden" name="keyword" value="<%= keyword%>"></div>
 			<div id="reputation">
 				<P>흥미도
 					<input type="radio" name="heung" value="5"/>5점

@@ -21,13 +21,11 @@
 		<div id="contentsWrap">
 			<div class="wrapper">			
 				<%
-				request.setCharacterEncoding("utf-8");		    
+				request.setCharacterEncoding("utf-8");				
 				
-				
-				
-				String keyword = request.getParameter("keyword");	
-				
-				
+				String str = request.getParameter("keyword");	
+				String keyword = new String(str.getBytes("8859_1"), "UTF-8");
+				request.setAttribute("keyword", keyword);
 				
 				Class.forName("com.mysql.jdbc.Driver");
 				
@@ -49,41 +47,7 @@
 								<th>학교</th>
 								<th>전공</th>
 							</tr>
-							<tr>
-							<td>권동섭</td>
-							<td>명지대학교</td>
-							<td>컴퓨터공학과</td>
-							</tr>
-							<tr>
-              <td>김미나</td>
-              <td>용인대학교</td>
-              <td>식품영양학과</td>
-              </tr>
-              <tr>
-              <td>홍길동</td>
-              <td>아주대학교</td>
-              <td>경영학과</td>
-              </tr>
-              <tr>
-              <td>김철수</td>
-              <td>한국외국어대학교</td>
-              <td>영어영문학과</td>
-              </tr>
-              <tr>
-              <td>이지은</td>
-              <td>명지대학교</td>
-              <td>미술사학과</td>
-              </tr>
-              <tr>
-              <td>유홍준</td>
-              <td>명지대학교</td>
-              <td>미술사학과</td>
-              </tr>
-              <tr>
-              <td>박명성</td>
-              <td>명지대학교</td>
-              <td>영화뮤지컬학과</td>
-              </tr>
+							
 							
 							<%				  
 							try{
