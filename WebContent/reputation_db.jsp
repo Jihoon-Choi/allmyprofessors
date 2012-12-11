@@ -1,15 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8" errorPage="DBError.jsp" %>
-<%@page import="java.sql.*"%>
+<%@page import="java.sql.*" import="java.util.*"%>
 <%
     
-			String keyword = request.getParameter("keykey");
-			int heung = request.getParameter("heung");
-			int nan = request.getParameter("nan");
-			int myung = request.getParameter("myung");
+			String keyword = request.getParameter("keyword");
+			String heung = request.getParameter("heung");
+			String nan = request.getParameter("nan");
+			String myung = request.getParameter("myung");
 	
 	
 		Connection conn = null;
-    Statement stmt = null;
+    PreparedStatement stmt = null;
     
 	try {
         Class.forName("com.mysql.jdbc.Driver");
@@ -18,11 +18,14 @@
         if (conn == null)
             throw new Exception("Failed Connecting to DB");
 			
-        String query ="select * from reputation where name='"+keyword+"';";
-        stmt = conn.preparedStatement(query);
+        String query ="select * from reputation where name='?';";
+        stmt = conn.prepareStatement(query);
+        stmt.setString(1, keyword);
+        ResultSet rs = stmt.executeQuery();
+       
         
-        String command = String.format("insert into reputation(keyword, grade_a, grade_b, grade_c) 
-        																			select '%s','%s','%s' from reputation where name like '%s';",heung,nan,myung,keyword);
+        
+        String command = String.format("insert into reputation(keyword, grade_a, grade_b, grade_c)",keyword,heung,nan,myung);
         
         int rowNum = stmt.executeUpdate(command);
 		

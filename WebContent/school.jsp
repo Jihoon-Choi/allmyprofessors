@@ -56,35 +56,7 @@
               <tr>
                 <th>학교</th>
                 <th>지역</th>
-              </tr>
-              <tr>
-              <td>명지대학교</td>
-              <td>용인</td>
-              </tr>
-              <tr>           
-              <td>용인대학교</td>
-              <td>용인</td>
-              </tr>
-              <tr>            
-              <td>아주대학교</td>
-              <td>수원</td>
-              </tr>
-              <tr>            
-              <td>한국외국어대학교</td>
-              <td>서울</td>
-              </tr>
-              <tr>       
-              <td>명지대학교</td>
-              <td>서울</td>
-              </tr>
-              <tr>            
-              <td>한양대학교</td>
-              <td>안산</td>
-              </tr>
-              <tr>             
-              <td>경희대학교</td>
-              <td>수원</td>
-              </tr>
+              </tr>          
 				
 				
 				<% 
@@ -97,17 +69,11 @@
         
         
         while(rs.next()){	%>
-<<<<<<< HEAD
-=======
-
 			<tr>		
 
 			<tr align="center">
 			<%-- 
 		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
-
-
->>>>>>> a73d8a29ce36e0319906b0490c7084fe7e1b5240
 
 			<tr>		
 			<tr align="center">
@@ -124,11 +90,8 @@
     if(stmt != null){try{stmt.close();}catch(SQLException e){}}
     if(conn != null){try{conn.close();}catch(SQLException e){}}}      
 	%>
-<<<<<<< HEAD
 			
 			</table>
-			
-=======
 			
 			</table>
 
@@ -162,7 +125,6 @@
 					
 				</div>
 			
->>>>>>> a73d8a29ce36e0319906b0490c7084fe7e1b5240
 		</div>
 	</div>
 	</div>

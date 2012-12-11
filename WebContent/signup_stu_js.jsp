@@ -30,7 +30,6 @@
   if (major == null || major.trim().length() == 0)
       throw new Exception("전공을 반드시 입력해주세요.");
   
-
     
   Connection conn = null;
   Statement stmt = null;

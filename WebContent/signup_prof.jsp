@@ -27,7 +27,7 @@
 		<div id="contentsWrap">
 			<form action="./signup_prof_db.jsp" method="post">
 				<ul>
-<<<<<<< HEAD
+
 				<li>Email<input type="text" placeholder="ex)admin@mju.ac.kr" 
 										class="input-xlarge" name="email"></li>
 					<li>Password<input type="text" placeholder="최소 6자" 
@@ -40,7 +40,7 @@
 										class="input-xlarge" name="major"></li>
 					<li>Phone<input type="text" placeholder="ex)01012345678" 
 										class="input-xlarge" name="phone"></li>
-=======
+
 					<li>Email<input type="text" name="email">  </li>
 					<li>Password<input type="text" name="passwd">  </li>
 					<li>name<input type="text" name="name"></li>
@@ -51,7 +51,7 @@
 						<input type="radio" name="year" value="4"/>4년제
 						<input type="radio" name="year" value="2"/>2년제
 					</li>
->>>>>>> a73d8a29ce36e0319906b0490c7084fe7e1b5240
+
 				</ul>					
 				<input type="submit" value="가입완료">
 			</form>
