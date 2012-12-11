@@ -22,20 +22,28 @@
 		<div id="contentsWrap">
 		<div id="contentsWrap_addsch">
 			<form action="./add_school_db.jsp" method="post">
-
-				<ul>
-					<li>School name<input type="text" name="school"></li>
-					<li>University / College
-						<input type="radio" name="year" value="4"/>4년제
-						<input type="radio" name="year" value="2"/>2년제
-					</li>			
-					<li>HomePage<input type="text" name="homepage"></li>
-					<li>Tell<input type="text" name="tell"></li>
-		
-
-					<input type="submit" value="추가하기">
-				</ul>
-					
+				 <table>
+				  <tr>
+						<td>School</td>
+						<td><input type="text" name="school"></td>	
+					</tr>
+					<tr>
+						<td>University / College</td>
+						<td><input type="radio" name="year" value="4"/>4년제
+							<input type="radio" name="year" value="2"/>2년제</td>				
+					</tr>
+					<tr>
+						<td>Homepage</td>
+						<td><input type="text" name="homepage"></td>	
+					</tr>
+					<tr>					
+						<td>Tell</td>
+						<td><input type="text" name="tell"></td>
+					</tr>
+					<tr>	
+								<input type="submit" value="추가하기">
+					</tr>
+				</table>								
 			</form>
 			</div>
 		</div>

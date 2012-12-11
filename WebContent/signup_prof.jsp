@@ -27,20 +27,6 @@
 		<div id="contentsWrap">
 			<form action="./signup_prof_db.jsp" method="post">
 				<ul>
-
-				<li>Email<input type="text" placeholder="ex)admin@mju.ac.kr" 
-										class="input-xlarge" name="email"></li>
-					<li>Password<input type="text" placeholder="최소 6자" 
-											class="input-xlarge" name="passwd"></li>
-					<li>name<input type="text" placeholder="한글입력" 
-									class="input-xlarge" name="name"></li>
-					<li>School<input type="text" placeholder="ex)명지대학교,송담대학" 
-											class="input-xlarge" name="school"></li>
-					<li>Major<input type="text" placeholder="ex)컴퓨터공학과" 
-										class="input-xlarge" name="major"></li>
-					<li>Phone<input type="text" placeholder="ex)01012345678" 
-										class="input-xlarge" name="phone"></li>
-
 					<li>Email<input type="text" name="email">  </li>
 					<li>Password<input type="text" name="passwd">  </li>
 					<li>name<input type="text" name="name"></li>

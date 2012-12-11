@@ -24,33 +24,29 @@
 			<br/><br/>
       <table>
 				  <tr>
-						<td>&nbsp&nbspSchool</td>
-						<td><input type="text" name="school"></td>
+						<td>School</td>
+						<td><input type="text" name="school"></td>	
 					</tr>
 					<tr>
-						<td>University / College
-							<input type="radio" name="year" value="4"/>4년제
-							<input type="radio" name="year" value="2"/>2년제
-						</td>
-					</li>	
+						<td>University / College</td>
+						<td><input type="radio" name="year" value="4"/>4년제
+							<input type="radio" name="year" value="2"/>2년제</td>				
 					</tr>
 					<tr>
-						<td>&nbsp&nbspName</td>
+						<td>Name</td>
 						<td><input type="text" name="name"></td>	
 					</tr>
 					<tr>					
-						<td>&nbsp&nbspMajor</td>
+						<td>Major</td>
 						<td><input type="text" name="major"></td>
 					</tr>
 					<tr>
-						<td>&nbsp&nbspComment</td>
+						<td>Comment</td>
 						<td><input type="text" name="comment"></td>
 					</tr>
 					</table>
 					<br/>
 					
-          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 					<input type="submit" value="추가하기">
 			</form>
 			
