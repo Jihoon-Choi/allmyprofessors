@@ -23,8 +23,8 @@
 				<%
 				request.setCharacterEncoding("utf-8");				
 				
-				String str = request.getParameter("keyword");	
-				String keyword = new String(str.getBytes("8859_1"), "UTF-8");
+				String keyword = request.getParameter("keyword");	
+				//String keyword = new String(str.getBytes("8859_1"), "UTF-8");
 				request.setAttribute("keyword", keyword);
 				
 				Class.forName("com.mysql.jdbc.Driver");

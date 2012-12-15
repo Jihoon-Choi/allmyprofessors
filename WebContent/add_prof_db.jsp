@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8" errorPage="DBError.jsp" %>
-<%@page import="java.sql.*"%>
+<%@page import="java.sql.*" import="java.util.*"%>
 <%
     
 	
@@ -13,33 +13,28 @@
         throw new Exception("데이터를 입려하십시오");
 
     
-	Connection conn = null;
-    Statement stmt = null;
+		Connection conn = null;
+    PreparedStatement stmt = null;
     
 	try {
         Class.forName("com.mysql.jdbc.Driver");
 		
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");
         if (conn == null)
-            throw new Exception("데이터베이스에 연결 불가능");
-
-        
-        
-        
+            throw new Exception("데이터베이스에 연결 불가능");        
 			
-        stmt = conn.createStatement();
-  
+        stmt = conn.prepareStatement(
+        		"insert into reputation(school, name, major,comment, year) "  
+        		+ "values(?,?,?,?,?)"
+        		);
         
-        
-        
-        String command = String.format("insert into reputation" +
-                  "(school, name, major,comment, year) values ('%s','%s','%s','%s','%s');",
-                  school, name, major, comment,year);
-        int rowNum = stmt.executeUpdate(command);
+        stmt.setString(1, school);
+        stmt.setString(2, name);
+        stmt.setString(3, major);
+        stmt.setString(4, comment);
+        stmt.setString(5, year);
 		
-        if (rowNum < 1)
-            throw new Exception("데이터를 DB에 입력할 수 없습니다.");
-
+       
     }
     finally {
         try { 

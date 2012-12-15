@@ -29,8 +29,8 @@
 		<%
 	    request.setCharacterEncoding("utf-8");		    
 	    
-			String str = request.getParameter("keyword");	
-			String keyword = new String(str.getBytes("8859_1"), "UTF-8");
+			String keyword = request.getParameter("keyword");	
+			//String keyword = new String(str.getBytes("8859_1"), "UTF-8");
 			request.setAttribute("keyword", keyword);
 		
 		
@@ -59,7 +59,9 @@
             <table>
               <tr>
                 <th>학교</th>
-                <th>지역</th>
+                <th>4/2년제</th>
+                <th>연락처</th>
+                <th>홈페이지</th>
               </tr>          
 				
 				
@@ -69,7 +71,7 @@
 		           
         conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");        
         stmt = conn.createStatement();        
-        rs = stmt.executeQuery("select * from reputation where name like '%"+keyword+"%' or school like '%"+keyword+"%';");
+        rs = stmt.executeQuery("select * from school where name like '%"+keyword+"%'");
         
         
         while(rs.next()){	%>
@@ -84,7 +86,10 @@
 			<%-- 
 		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
 		        <td><%= rs.getString("name") %></td>
-		        <td><%= rs.getString("email") %></td>				        
+		         <td><%= rs.getString("year") %></td>
+		        <td><%= rs.getString("email") %></td>		
+		           <td><%= rs.getString("tell") %></td>		
+		              <td><%= rs.getString("homepage") %></td>				        
 			</tr>
 	<%
 		}
@@ -97,34 +102,11 @@
 			
 			</table>
 			
-			</table>
+	
 
 							
-							<%				  
-							try{
-								   
-								conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");        
-								stmt = conn.createStatement();        
-								rs = stmt.executeQuery("select * from reputation where school like '%"+keyword+"%';");
-					
-					
-							while(rs.next()){	%>
-								<tr align="center">										
-									<td><a href="./info_prof.jsp?keyword=<%=keyword %>" target="_blank"><%= rs.getString("name") %></a></td>
-									<td><%= rs.getString("school") %></td>
-									<td><%= rs.getString("major") %></td>					
-								</tr>
 							
-							
-										<%
-											}
-										}catch(SQLException e){
-										}finally{
-										if(rs != null){try{rs.close();}catch(SQLException e){}}
-										if(stmt != null){try{stmt.close();}catch(SQLException e){}}
-										if(conn != null){try{conn.close();}catch(SQLException e){}}}      
-										%>				
-						</table>					
+											
 					</div>		
 					
 				</div>

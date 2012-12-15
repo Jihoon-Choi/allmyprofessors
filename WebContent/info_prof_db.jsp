@@ -10,7 +10,7 @@
 			
 			
 			Connection conn = null;
-		    Statement stmt = null;
+		  PreparedStatement stmt = null;
 		    
 			try {
 		        Class.forName("com.mysql.jdbc.Driver");
@@ -19,14 +19,15 @@
 		        if (conn == null)
 		            throw new Exception("데이터베이스에 연결할 수 없습니다.");
 					
-		        stmt = conn.createStatement();
-		        String command = String.format("insert into reputation " +
-		                  "(name, grade_a, grade_b, grade_c, comment) values ('%s', '%s', '%s', '%s', '%s');",
-		                  keyword, heung, nan, myung, comment);
-		        int rowNum = stmt.executeUpdate(command);
-				
-		        if (rowNum < 1)
-		            throw new Exception("데이터를 DB에 입력할 수 없습니다.");
+		        stmt = conn.prepareStatement("insert into reputation(name, grade_a, grade_b, grade_c, comment)" +
+		        	"values (?,?,?,?,?)");
+		                  
+		     	  stmt.setString(1, keyword);
+		        stmt.setString(2, heung);
+		        stmt.setString(3, nan);
+		        stmt.setString(4, myung);
+		        stmt.setString(5, comment);		        
+		        
 		    }
 		    finally {
 		        try {stmt.close();

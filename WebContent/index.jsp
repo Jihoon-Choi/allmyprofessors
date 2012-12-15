@@ -29,7 +29,7 @@ errorPage="DBError.jsp" %>
 				<form ACTION="./index_stu_or_prof.jsp" METHOD="get">					
 					<input type=text name="keyword" id="search_box" style="width:200px">	
 						
-					<select name="sel">
+					<select name="sel" style="width:130px">
 						<option value="1">Professor </option>
 						<option value="2">School </option>
 					</select>	

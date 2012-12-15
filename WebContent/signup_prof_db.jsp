@@ -14,7 +14,7 @@
         throw new Exception("데이터를 입력하십시오.");
     
 	Connection conn = null;
-    Statement stmt = null;
+  PreparedStatement stmt = null;
     
 	try {
         Class.forName("com.mysql.jdbc.Driver");
@@ -23,14 +23,17 @@
         if (conn == null)
             throw new Exception("데이터베이스에 연결할 수 없습니다.");
 			
-        stmt = conn.createStatement();
-        String command = String.format("insert into professor " +
-                  "(email, passwd, name, school, major, phone) values ('%s', '%s', '%s', '%s', '%s', '%s');",
-                  email, passwd, name, school, major, phone);
-        int rowNum = stmt.executeUpdate(command);
-		
-        if (rowNum < 1)
-            throw new Exception("데이터를 DB에 입력할 수 없습니다.");
+        stmt = conn.prepareStatement("insert into professor(email, passwd, name, school, major, phone) " +
+        	"	values (?,?,?,?,?,?)");
+        
+        stmt.setString(1, email);
+        stmt.setString(2, passwd);
+        stmt.setString(3, name);
+        stmt.setString(4, school);
+        stmt.setString(5, major);
+        stmt.setString(6, phone);
+        
+               
     }
     finally {
         try { 

@@ -21,7 +21,7 @@ errorPage="DBError.jsp" %>
 			<div id="header"><jsp:include page="header.jsp" flush="false"/>	</div>
 			<div id="nav"><jsp:include page="navbar.jsp" flush="false"/></div>
 			
-			<div id="contentsWrap">
+			<div id="contentsWrap_a_p">
 				<p> 교수용 회원가입 바로가기  <a href="./signup_prof.jsp">CLICK</a></p>
 								
 												
@@ -29,28 +29,36 @@ errorPage="DBError.jsp" %>
 
 	<form class="form-horizontal" action="./signup_student_db.jsp" method="post">
 				  
-				<ul>
-					<li>Email<input type="text" placeholder="ex)admin@mju.ac.kr" 
-										class="input-xlarge" name="email"></li>
-					<li>Password<input type="text" placeholder="최소 6자" 
-											class="input-xlarge" name="passwd"></li>
-					<li>name<input type="text" placeholder="한글입력" 
-									class="input-xlarge" name="name"></li>
-					<li>School<input type="text" placeholder="ex)명지대학교,송담대학" 
-											class="input-xlarge" name="school"></li>
-					<li>Major<input type="text" placeholder="ex)컴퓨터공학과" 
-										class="input-xlarge" name="major"></li>			
-						
-				</ul>					
+				<table>
+					<tr>
+					<td>Email</td>
+					<td><input type="text" placeholder="ex)admin@mju.ac.kr" 
+										class="input-xlarge" name="email"></td>
+					</tr>
+					<tr>
+					<td>Password</td>
+					<td><input type="text" placeholder="최소 6자" 
+										class="input-xlarge" name="passwd"></td>
+					</tr>
+					<tr>
+					<td>name</td>
+					<td><input type="text" placeholder="한글입력" 
+									class="input-xlarge" name="name"></td>
+					</tr>
+					<tr>
+					<td>School</td>
+					<td><input type="text" placeholder="ex)명지대학교,송담대학" 
+										class="input-xlarge" name="school"></td>
+					</tr>
+					<tr>
+					<td>Major</td>
+					<td><input type="text" placeholder="ex)컴퓨터공학과" 
+										class="input-xlarge" name="major"></td>			
+										
+				</table>
 				<input type="submit" value="가입완료">
 	</form>
 		
-
-				
-
-
-			
-
 			</div>
 			
 			<div id="footer"><jsp:include page="footer.jsp" flush="false"/>	</div>

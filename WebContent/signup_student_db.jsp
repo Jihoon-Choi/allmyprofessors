@@ -4,7 +4,7 @@
     
 	//변경 요!! 아랫 부분은 스트링 객체 생성
 	String email = request.getParameter("email");  
-    String password = request.getParameter("passwd");
+  String password = request.getParameter("passwd");
 	String name = request.getParameter("name");
 	String school = request.getParameter("school");
     String major = request.getParameter("major");	
@@ -14,7 +14,7 @@
         throw new Exception("데이터를 입력하십시오.");
     
 	Connection conn = null;
-    Statement stmt = null;
+ 	PreparedStatement stmt = null;
     
 	try {
         Class.forName("com.mysql.jdbc.Driver");
@@ -24,16 +24,16 @@
         if (conn == null)
             throw new Exception("데이터베이스에 연결할 수 없습니다.");
 			
-        stmt = conn.createStatement();
+        stmt = conn.prepareStatement("insert into student(student_email, password, name, major_name, school_name) " +
+        		" values (?,?,?,?,?,?)");
+        
+        stmt.setString(1, email);
+        stmt.setString(2, password);
+        stmt.setString(3, name);
+        stmt.setString(4, school);
+        stmt.setString(5, major);       
 		
-		//변경 요!! insert into 테이블명 DB에 요소들 values 자료형 -->
-        String command = String.format("insert into student " +
-                  "(student_email, password, name, major_name, school_name,year) values ('%s', '%s', '%s', '%s', '%s','%s');",
-                  email, password, name, major, school);
-        int rowNum = stmt.executeUpdate(command);
-		
-        if (rowNum < 1)
-            throw new Exception("데이터를 DB에 입력할 수 없습니다.");
+    
     }
     finally {
         try { 

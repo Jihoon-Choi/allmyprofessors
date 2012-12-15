@@ -9,7 +9,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>All My Professors</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">	
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+			<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">	
+	<script type="text/JavaScript" src="./jquery-1.8.2.min.js"></script>	
 	
 </head>
 
@@ -19,7 +21,7 @@
 		<div id="header"><jsp:include page="header.jsp" flush="false"/>	</div>
 		<div id="nav"><jsp:include page="navbar.jsp" flush="false"/></div>
 	
-		<div id="contentsWrap">
+		<div id="contentsWrap_a_p">
 		<div id="contentsWrap_addsch">
 			<form action="./add_school_db.jsp" method="post">
 				 <table>
@@ -39,11 +41,9 @@
 					<tr>					
 						<td>Tell</td>
 						<td><input type="text" name="tell"></td>
-					</tr>
-					<tr>	
-								<input type="submit" value="추가하기">
-					</tr>
-				</table>								
+					</tr>	
+				</table>
+				<input type="submit" value="추가하기">								
 			</form>
 			</div>
 		</div>

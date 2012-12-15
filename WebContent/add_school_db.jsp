@@ -13,7 +13,7 @@
         throw new Exception("Data를 입력하십시오.");
     
 	Connection conn = null;
-    Statement stmt = null;
+  PreparedStatement stmt = null;
     
 	try {
         Class.forName("com.mysql.jdbc.Driver");
@@ -22,14 +22,13 @@
         if (conn == null)
             throw new Exception("Failed Connecting to DB");
 			
-        stmt = conn.createStatement();
-        String command = String.format("insert into school" +
-                  "(name, homepage, tell, year) values ('%s','%s','%s','%s');",
-                  school, homepage, tell,year);
-        int rowNum = stmt.executeUpdate(command);
-		
-        if (rowNum < 1)
-            throw new Exception("DATA를 DB에 입력 불가능합니다.");
+        stmt = conn.prepareStatement("insert into school(name, homepage, tell, year)" + " values (?,?,?,?);");
+        
+        stmt.setString(1, school);
+        stmt.setString(2, homepage);
+        stmt.setString(3, tell);
+        stmt.setString(4, year);        
+        
     }
     finally {
         try { 
