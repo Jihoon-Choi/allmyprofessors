@@ -33,7 +33,9 @@
         stmt.setString(3, major);
         stmt.setString(4, comment);
         stmt.setString(5, year);
-		
+			
+        stmt.executeUpdate();
+        
        
     }
     finally {

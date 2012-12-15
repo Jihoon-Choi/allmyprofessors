@@ -33,7 +33,7 @@
         stmt.setString(4, school);
         stmt.setString(5, major);       
 		
-    
+        stmt.executeUpdate();
     }
     finally {
         try { 

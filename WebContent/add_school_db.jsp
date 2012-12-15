@@ -29,6 +29,7 @@
         stmt.setString(3, tell);
         stmt.setString(4, year);        
         
+        stmt.executeUpdate();
     }
     finally {
         try { 

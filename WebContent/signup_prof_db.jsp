@@ -32,7 +32,7 @@
         stmt.setString(4, school);
         stmt.setString(5, major);
         stmt.setString(6, phone);
-        
+        stmt.executeUpdate();
                
     }
     finally {
