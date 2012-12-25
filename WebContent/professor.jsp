@@ -46,15 +46,9 @@
 				<p>검색값 : 
 					<span class="input-xlarge uneditable-input"><%= keyword %></span>
 				</p>
-				<p><%= keyword %>으로 검색한 결과는, </p><br/>
-				<div id="searchMap">
-					<div id="proSearch">
-						<input type="text">
-						<input type="button" value="search"><br/><br/>
-						<p>학교를 등록하시려면 <a href="./add_school.jsp">Click</a>해 주세요.</p>
-					</div>
-				</div>
-				</div>
+				<p>교수를 등록하시려면 <a href="./add_prof.jsp">Click</a>해 주세요.</p>
+			</div>
+				
 				
 				<br/><br/>   
           <div id="searchData_2">
@@ -88,7 +82,7 @@
 			<tr align="center">
 			<%-- 
 		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
-		        <td><%= rs.getString("name") %></td>
+		        <td><a href="./info_prof.jsp?keyword=<%=keyword %>" target="_blank"><%= rs.getString("name") %></a></td>
 		        <td><%= rs.getString("year") %></td>	
 		        <td><%= rs.getString("school") %></td>		
 		        <td><%= rs.getString("major") %></td>				        

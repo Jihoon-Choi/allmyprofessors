@@ -5,27 +5,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>Insert title here</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	
 </head>
-<body>
 
-	<div id="siteWrap">		
-		
-		<div id="contentsWrap">					
-		   <H1>교수 평가 페이지</H1>
-		   <div id="searchContents">			
-					<div id="searchData">
-						<table border="1">
-							<tr><th>교수</th>
-									<th>E-mail</th>
-									<th>학교</th>
-									<th>전공</th>
-									<th>연락처</th>
-									<th>코멘트</th>
-							</tr>	
-							
-							<%
+
+
+								
+
+<body>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <%
 							request.setCharacterEncoding("utf-8");		    
 							
 							String keyword = request.getParameter("keyword");
@@ -40,28 +33,62 @@
 							try{								   
 								conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/amp","root","1234");        
 								stmt = conn.createStatement();        
-								rs = stmt.executeQuery("select * from reputation where name like '%"+keyword+"%';");		
-							
+								rs = stmt.executeQuery("select * from reputation where name like '%"+keyword+"%';");
+								while(rs.next()){
+%>
+	<div id="siteWrap">		
+		
+		<div id="contentsWrap">					
+		  
+		   <div id="searchContents">
+		   <p>
+		   		<form class="form-horizontal">
+				  <div class="control-group">
+				    <label class="control-label" for="inputEmail">Name</label>
+				    <div class="controls">
+				    	 <%= rs.getString("name") %>
+				    </div>
+				  </div>
+				  <div class="control-group">
+				    <label class="control-label" for="inputEmail">School</label>
+				    <div class="controls">
+				   	  <%= rs.getString("school") %>
+				    </div>
+				  </div>
+				  <div class="control-group">
+				    <label class="control-label" for="inputEmail">Major</label>
+				    <div class="controls">
+				    <%= rs.getString("major") %>
+				    </div>
+				  </div>
+				  <div class="control-group">
+				    <label class="control-label" for="inputEmail">Tell</label>
+				    <div class="controls">
+				    <%= rs.getString("tell") %>
+				    </div>
+				  </div>
+				  <div class="control-group">
+				    <label class="control-label" for="inputEmail">Comment</label>
+				    <div class="controls">
+				    <%= rs.getString("comment") %>
+				    </div>
+				  </div>
+			
+				</form>
+			</p>			
 					
-							while(rs.next()){	%>
-								<tr align="center">		
-									<td><%= rs.getString("name") %></td>	
-									<td><%= rs.getString("email") %></td>	
-									<td><%= rs.getString("school") %></td>	
-									<td><%= rs.getString("major") %></td>								
-									<td><%= rs.getString("phone") %></td>	
-								  <td><%= rs.getString("comment") %></td>	
-								</tr>	
 							
+									
+				
 										<%
-											}
+								}
 										}catch(SQLException e){
 										}finally{
 										if(rs != null){try{rs.close();}catch(SQLException e){}}
 										if(stmt != null){try{stmt.close();}catch(SQLException e){}}
 										if(conn != null){try{conn.close();}catch(SQLException e){}}}      
 										%>				
-						</table>	
+						
 						
 						
 							
