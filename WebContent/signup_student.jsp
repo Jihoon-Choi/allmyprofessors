@@ -37,7 +37,7 @@ errorPage="DBError.jsp" %>
 					</tr>
 					<tr>
 					<td>Password</td>
-					<td><input type="text" placeholder="최소 6자" 
+					<td><input type="password" placeholder="최소 6자" 
 										class="input-xlarge" name="passwd"></td>
 					</tr>
 					<tr>
@@ -53,7 +53,12 @@ errorPage="DBError.jsp" %>
 					<tr>
 					<td>Major</td>
 					<td><input type="text" placeholder="ex)컴퓨터공학과" 
-										class="input-xlarge" name="major"></td>			
+										class="input-xlarge" name="major"></td>	
+					</tr>
+					<td>University / College</td>					
+					<td><input type="radio" name="year" value="4"/>4년제
+						<input type="radio" name="year" value="2"/>2년제</td>
+					</tr>			
 										
 				</table>
 				<input type="submit" value="가입완료">

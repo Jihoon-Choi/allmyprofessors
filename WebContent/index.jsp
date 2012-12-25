@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="euc-kr" import="java.util.*" import="java.sql.*"
+	pageEncoding="utf-8" import="java.util.*" import="java.sql.*"
 errorPage="DBError.jsp" %>
 
 
@@ -10,32 +10,36 @@ errorPage="DBError.jsp" %>
 	<%request.setCharacterEncoding("utf-8");%>	
 	<meta charset="utf-8">	
 	<title>All My Professors</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">	
-	<script type="text/JavaScript" src="./jquery-1.8.2.min.js"></script>	
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	
+	
 </head>
 	
 <body>
-	
+
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
 		<div id="siteWrap">
 			<div id="header">
-				<a href="./login2.jsp"><input type="button" value="Login" style="width:100px"></a>
-				<a href="./signup_student.jsp"><input type="button" value="Sign-up" style="width:100px"></a>						
+				<a href="./login.jsp"><input type="button" class="btn btn-danger" name="input" value="Log-in" style="width:100px"></a>			  
+				<a href="./signup_student.jsp"><input type="button" class="btn btn-warning" value="Sign-up" style="width:100px"></a>			
 			</div>
 			
 			<div id="contents_main">
-				<img src="./img/logo.png" style="width:300px"><br/>
+				<img src="./img/logo.png" style="width:350px"><br/>
 				
-				<form ACTION="./index_stu_or_prof.jsp" METHOD="get">					
-					<input type=text name="keyword" id="search_box" style="width:200px">	
-						
-					<select name="sel">
-						<option value="1">Professor </option>
-						<option value="2">School </option>
-					</select>	
-								
-					<input type=submit value="Search" style="width:100px">
-
+				<form ACTION="./index_stu_or_prof.jsp" METHOD="get">
+						<input class="input-xlarge" name="keyword" type="text">
+							
+											
+						<select name="sel" style="width:120px">
+							<option value="1">Professor </option>
+							<option value="2">School </option>
+						</select>	
+					<p>							
+							<button class="btn btn-large" type="submit">Search</button>
+					</p>
 				
 				</form>					
 			</div>

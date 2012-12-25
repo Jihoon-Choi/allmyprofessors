@@ -36,16 +36,10 @@
                
     }
     finally {
-        try { 
-            stmt.close();
-        } 
-        catch (Exception ignored) {
-        }
-        try { 
-            conn.close();
-        } 
-        catch (Exception ignored) {
-        }
+        try {stmt.close();} 
+        catch (Exception ignored){}
+        try {conn.close();} 
+        catch (Exception ignored) {}
     }
-    response.sendRedirect("signup_student_after.jsp");
+    response.sendRedirect("signup_success.jsp");
 %>

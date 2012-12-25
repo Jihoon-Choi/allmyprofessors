@@ -158,8 +158,6 @@ clear:both;
 #searchData_2 table td {
   text-align: center;
 }
-<<<<<<< HEAD
-=======
 
 #contentsWrap_addsch  table{
    border: 2px solid #d7e9f9;
@@ -181,4 +179,10 @@ clear:both;
   text-align: left;
   font-weight:bold;
 }
->>>>>>> a73d8a29ce36e0319906b0490c7084fe7e1b5240
+
+
+.navbar-form pull-left{
+margin:0 auto;
+text-align:center;
+}
+	

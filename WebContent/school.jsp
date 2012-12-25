@@ -43,7 +43,9 @@
 		    
 
 		    <div id="sch_1">
-				<p>안녕하세요, <%= keyword %>으로 검색하셨군요!!!</p>
+				<p>검색값 : 
+					<span class="input-xlarge uneditable-input"><%= keyword %></span>
+				</p>
 				<p><%= keyword %>으로 검색한 결과는, </p><br/>
 				<div id="searchMap">
 					<div id="proSearch">
@@ -56,7 +58,7 @@
 				
 				<br/><br/>   
           <div id="searchData_2">
-            <table>
+            <table class="table table-striped">
               <tr>
                 <th>학교</th>
                 <th>4/2년제</th>
@@ -86,10 +88,9 @@
 			<%-- 
 		        <td><a href="content.jsp?idx=<%=rs.getString("idx")%>"><%= rs.getString("id") %></a></td> --%>
 		        <td><%= rs.getString("name") %></td>
-		         <td><%= rs.getString("year") %></td>
-		        <td><%= rs.getString("email") %></td>		
-		           <td><%= rs.getString("tell") %></td>		
-		              <td><%= rs.getString("homepage") %></td>				        
+		        <td><%= rs.getString("year") %></td>	
+		        <td><%= rs.getString("tell") %></td>		
+		        <td><%= rs.getString("homepage") %></td>				        
 			</tr>
 	<%
 		}

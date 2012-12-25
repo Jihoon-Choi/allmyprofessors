@@ -57,7 +57,7 @@
     {
      out.print( "회원정보가 없습니다. " );
      %>
-  <input type="button" name="input" value="HOME" onClick="javascript:window.location.href('index.jsp')"/>
+  <input type="button" name="input" value="HOME" onClick="javascript:window.location.href('./index.jsp')"/>
                  <%
     }
    }

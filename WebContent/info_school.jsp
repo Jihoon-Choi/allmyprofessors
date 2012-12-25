@@ -46,7 +46,7 @@
 										<td><a href="./info_school.jsp?school=<%=keyword%>"><%= rs.getString("name") %></a></td>	
 										<td><a href="./info_school.jsp?school=<%=keyword%>"><%= rs.getString("homepage") %></a></td>	
 										<td><a href="./info_school.jsp?school=<%=keyword%>"><%= rs.getString("tell") %></a></td>					
-									</tr>	<br/>				
+									</tr>	</br>				
 							
 										<%
 											}

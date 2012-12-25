@@ -69,12 +69,7 @@
 			<p> Copyright(c) Choi Jihoon. All rights reserved.
 			</p>
 		</div>
-
-		<div id="footerSearch">
-			<input type="text">
-			<input type="button" value="search">
-		</div>
-	
+		
 	</div>
 
 		
