@@ -29,15 +29,14 @@ errorPage="DBError.jsp" %>
 				<form ACTION="./index_stu_or_prof.jsp" METHOD="get">					
 					<input type=text name="keyword" id="search_box" style="width:200px">	
 						
-					<select name="sel" style="width:130px">
+					<select name="sel">
 						<option value="1">Professor </option>
 						<option value="2">School </option>
 					</select>	
 								
 					<input type=submit value="Search" style="width:100px">
 
-					<a href="./about.jsp"><input type="button" value="SKIP" style="width:100px"></a>
-
+				
 				</form>					
 			</div>
 			
