@@ -41,7 +41,7 @@
 		<div id="contentsWrap">					
 		  
 		   <div id="searchContents">
-		   <p>
+		  
 		   		<form class="form-horizontal">
 				  <div class="control-group">
 				    <label class="control-label" for="inputEmail">Name</label>
@@ -75,7 +75,7 @@
 				  </div>
 			
 				</form>
-			</p>			
+						
 					
 							
 									
@@ -128,7 +128,7 @@
 		<div id="footer"><jsp:include page="footer.jsp" flush="false"/>	</div>
 	</div>
 	</div>
-	</div>
+	
 
 </body>
 </html>

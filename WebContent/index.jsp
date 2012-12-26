@@ -22,8 +22,8 @@ errorPage="DBError.jsp" %>
     
 		<div id="siteWrap">
 			<div id="header">
-				<a href="./login.jsp"><input type="button" class="btn btn-danger" name="input" value="Log-in" style="width:100px"></a>			  
-				<a href="./signup_student.jsp"><input type="button" class="btn btn-warning" value="Sign-up" style="width:100px"></a>			
+				<a href="./login.jsp"><input type="button" class="btn btn-primary" name="input" value="Log-in" style="width:100px"></a>			  
+				<a href="./signup_student.jsp"><input type="button" class="btn btn-success" value="Sign-up" style="width:100px"></a>			
 			</div>
 			
 			<div id="contents_main">

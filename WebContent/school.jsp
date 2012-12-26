@@ -108,11 +108,10 @@
 			
 		</div>
 	</div>
-	</div>
+	
 	<br/><br/><br/><br/><br/><br/><br/>	
 	<div id="footer">			
 		<jsp:include page="footer.jsp" flush="false" />
-	</div>
 	</div>
 
 </body>

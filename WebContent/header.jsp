@@ -28,12 +28,12 @@
 		   <input type="button" class="btn btn-danger" name="input" value="Log-out" onClick="javascript:window.location.href('logoutConfirm.jsp')"/>
 		   <%
 			  }else{%>
-			<input type="button" class="btn btn-danger" name="input" value="Log-in" onClick="./signup_student.jsp"/>
+			<input type="button" class="btn btn-primary" name="input" value="Log-in" onClick="./signup_student.jsp"/>
 			   
 			   <%
 			  }
 			 %>
-		<a href="./signup_student.jsp"><input type="button" class="btn btn-warning" value="Sign-up" style="width:100px"></a>
+		<a href="./signup_student.jsp"><input type="button" class="btn btn-success" value="Sign-up" style="width:100px"></a>
 	</div>
 	
 	<div id="header_left">

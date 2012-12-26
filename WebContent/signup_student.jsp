@@ -55,6 +55,7 @@ errorPage="DBError.jsp" %>
 					<td><input type="text" placeholder="ex)컴퓨터공학과" 
 										class="input-xlarge" name="major"></td>	
 					</tr>
+					<tr>
 					<td>University / College</td>					
 					<td><input type="radio" name="year" value="4"/>4년제
 						<input type="radio" name="year" value="2"/>2년제</td>
